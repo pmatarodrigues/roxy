@@ -1,0 +1,37 @@
+{
+  "id": "portfolio-redesign-08",
+  "seq": "08",
+  "title": "Redesign contact conversion section with scrapbook CTA emphasis",
+  "status": "completed",
+  "depends_on": ["01"],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    "/Users/ctw04224/.config/opencode/context/core/standards/code-quality.md",
+    "/Users/ctw04224/.config/opencode/context/ui/web/ui-styling-standards.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-overview.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-stage-implementation.md"
+  ],
+  "reference_files": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/contact/contact-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/contact/contact-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/contact/contact-section.component.scss",
+    "/Users/ctw04224/Projects/roxy/src/styles/tokens.css"
+  ],
+  "acceptance_criteria": [
+    "Follows 4-stage design workflow",
+    "Responsive at all breakpoints",
+    "Contact section has strong scrapbook/editorial conversion emphasis",
+    "Primary contact CTA and support text use EN/PT mixed microcopy",
+    "No token values changed in src/styles/tokens.css"
+  ],
+  "deliverables": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/contact/contact-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/contact/contact-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/contact/contact-section.component.scss"
+  ],
+  "agent_id": "coder-agent",
+  "started_at": "2026-05-14T16:31:00Z",
+  "completed_at": "2026-05-14T16:42:00Z",
+  "completion_summary": "Contact section upgraded to stronger scrapbook CTA panel with EN/PT conversion microcopy, quick-start support note, and preserved safe outbound link semantics."
+}

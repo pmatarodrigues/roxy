@@ -1,0 +1,37 @@
+{
+  "id": "portfolio-redesign-05",
+  "seq": "05",
+  "title": "Redesign writing and blog cards for science communication narrative",
+  "status": "completed",
+  "depends_on": ["01"],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    "/Users/ctw04224/.config/opencode/context/core/standards/code-quality.md",
+    "/Users/ctw04224/.config/opencode/context/ui/web/ui-styling-standards.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-overview.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-stage-implementation.md"
+  ],
+  "reference_files": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/blog/blog-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/blog/blog-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/blog/blog-section.component.scss",
+    "/Users/ctw04224/Projects/roxy/src/styles/tokens.css"
+  ],
+  "acceptance_criteria": [
+    "Follows 4-stage design workflow",
+    "Responsive at all breakpoints",
+    "Blog cards reflect scrapbook/editorial paper layering style",
+    "Section microcopy uses EN/PT mixed tone focused on scientific writing",
+    "No token values changed in src/styles/tokens.css"
+  ],
+  "deliverables": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/blog/blog-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/blog/blog-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/blog/blog-section.component.scss"
+  ],
+  "agent_id": "coder-agent",
+  "started_at": "2026-05-14T16:31:00Z",
+  "completed_at": "2026-05-14T16:42:00Z",
+  "completion_summary": "Blog section restyled as scrapbook writing desk with tilted paper cards, EN/PT editorial microcopy, accessible link labels, and preserved routing/data behavior."
+}

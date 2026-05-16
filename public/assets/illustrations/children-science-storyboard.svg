@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Children outreach storyboard</title>
+  <desc id="desc">Four-panel illustration sequence for child-friendly oncology communication sessions.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="70" y="90" width="250" height="220" fill="#f5f8ff" stroke="#d6deef"/>
+  <rect x="345" y="90" width="250" height="220" fill="#fff4ef" stroke="#f0d6cb"/>
+  <rect x="620" y="90" width="250" height="220" fill="#f0fbf8" stroke="#cae9dd"/>
+  <rect x="895" y="90" width="250" height="220" fill="#f8f5ff" stroke="#d9d1f1"/>
+  <rect x="70" y="345" width="1075" height="240" fill="#fafbfe" stroke="#dbe2ef"/>
+  <text x="102" y="145" fill="#2b3854" font-size="24" font-family="Arial">1. Tiny cells</text>
+  <text x="377" y="145" fill="#2b3854" font-size="24" font-family="Arial">2. Body map</text>
+  <text x="652" y="145" fill="#2b3854" font-size="24" font-family="Arial">3. Team care</text>
+  <text x="927" y="145" fill="#2b3854" font-size="24" font-family="Arial">4. Hope & action</text>
+  <circle cx="195" cy="215" r="56" fill="#6f86ff" opacity="0.8"/>
+  <rect x="430" y="188" width="80" height="56" fill="#ff785d"/>
+  <path d="M736 255l38-70 38 70z" fill="#4dbf98"/>
+  <circle cx="1010" cy="215" r="46" fill="#8f6fe8"/>
+  <text x="110" y="405" fill="#2b3854" font-size="29" font-family="Arial">Storyboard used in PT science sessions for children, with EN summaries for portfolio readers.</text>
+</svg>

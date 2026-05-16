@@ -1,0 +1,6 @@
+name = "marta-rocha-portfolio"
+compatibility_date = "2026-05-14"
+
+[assets]
+directory = "./dist/roxy-portfolio/browser"
+not_found_handling = "single-page-application"

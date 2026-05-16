@@ -1,0 +1,128 @@
+<section id="videos" aria-labelledby="videos-title" class="video-gallery">
+  <header class="video-gallery__header">
+    <p class="video-gallery__eyebrow">Media portfolio / Portfólio de mídia</p>
+    <h2 id="videos-title">Talks + vídeos + visual notes / recortes editoriais</h2>
+    <p class="video-gallery__desc">
+      Selected talks, explainers, and visual pieces where oncology evidence is translated for
+      different audiences — ciência com narrativa / science with story.
+    </p>
+    <p class="video-gallery__stamp" aria-hidden="true">arquivo vivo · live archive</p>
+  </header>
+
+  <div class="scribble-divider video-gallery__divider" aria-hidden="true"></div>
+
+  <div
+    class="video-filters scrapbook-paper scrapbook-paper--tilt-left scrapbook-ribbon-top"
+    aria-label="Media filters"
+  >
+    <fieldset class="video-filters__group" aria-label="Filter by language">
+      <legend>Language / Idioma</legend>
+      <div class="video-filters__buttons">
+        @for (option of languageOptions; track option.value) {
+          <button
+            type="button"
+            class="filter-btn"
+            [class.filter-btn--active]="languageFilter() === option.value"
+            (click)="setLanguage(option.value)"
+          >
+            {{ option.label }}
+          </button>
+        }
+      </div>
+    </fieldset>
+
+    <label class="video-filters__select">
+      <span>Topic / Tema</span>
+      <select [value]="topicFilter()" (change)="setTopic($any($event.target).value)">
+        @for (topic of topicOptions; track topic.value) {
+          <option [value]="topic.value">{{ topic.label }}</option>
+        }
+      </select>
+    </label>
+
+    <label class="video-filters__search">
+      <span>Search / Buscar</span>
+      <input
+        type="search"
+        [value]="searchQuery()"
+        (input)="setSearchQuery($any($event.target).value)"
+        placeholder="children, biomarkers, evidence / evidência..."
+      />
+    </label>
+  </div>
+
+  @if (visibleMedia().length === 0) {
+    <p class="video-gallery__empty">
+      No media items match current filters / nenhum item corresponde aos filtros.
+    </p>
+  } @else {
+    <ul class="video-gallery__grid" aria-label="Media portfolio cards">
+      @for (media of visibleMedia(); track media.id; let isEven = $even) {
+        <li
+          class="media-card scrapbook-paper scrapbook-ticket-corner"
+          [class.media-card--alt]="isEven"
+          [class.scrapbook-stamp]="!isEven"
+          [class.scrapbook-paperclip]="isEven"
+        >
+          <div class="media-card__frame">
+            @if (isVideo(media)) {
+              <iframe
+                [src]="media.safeEmbedUrl"
+                [title]="media.title"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            }
+
+            @if (isIllustration(media)) {
+              <img
+                [src]="media.imagePath"
+                [alt]="media.altText"
+                loading="lazy"
+                decoding="async"
+                class="media-card__image"
+              />
+            }
+          </div>
+
+          <div class="media-card__body">
+            <div class="media-card__meta">
+              <span class="meta-tag meta-tag--type">{{ getMediaTypeLabel(media.mediaType) }}</span>
+              <span class="meta-tag">{{ media.language }}</span>
+              <span class="meta-tag">{{ getTopicLabel(media.topic) }}</span>
+            </div>
+
+            <h3>{{ media.title }}</h3>
+
+            @if (media.originalTitle) {
+              <p class="media-card__original">PT: {{ media.originalTitle }}</p>
+            }
+
+            <p class="media-card__summary">{{ media.summary }}</p>
+
+            <footer class="media-card__footer">
+              <span>{{ formatPublicationDate(media.publishedAt) }}</span>
+              <span>{{ getAudienceLabel(media.audience) }}</span>
+              @if (isVideo(media)) {
+                <span>{{ media.durationMinutes }} min / duração</span>
+              }
+              @if (isIllustration(media) && media.credit) {
+                <span>{{ media.credit }}</span>
+              }
+            </footer>
+          </div>
+        </li>
+      }
+    </ul>
+  }
+</section>

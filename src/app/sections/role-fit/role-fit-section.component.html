@@ -1,0 +1,37 @@
+<section id="role-fit" aria-labelledby="role-fit-title" class="role-fit">
+  <header class="role-fit__header">
+    <p class="role-fit__eyebrow">Role-fit snapshot · encaixe de carreira</p>
+    <h2 id="role-fit-title">
+      From PhD evidence to Medical Writer / MSL / Science Communication impact
+    </h2>
+    <p class="role-fit__lede">
+      Três caminhos, mesma base: rigor científico + comunicação clara para decisões reais.
+    </p>
+  </header>
+
+  <div class="scribble-divider" aria-hidden="true"></div>
+
+  <div class="role-fit__cards" role="list" aria-label="Role fit cards · cartões de aderência">
+    @for (item of strengthEvidence; track item.role) {
+      <article
+        class="role-card scrapbook-paper scrapbook-folder-tab"
+        [class.role-card--primary]="item.accent === 'primary'"
+        [class.role-card--coral]="item.accent === 'coral'"
+        [class.role-card--lavender]="item.accent === 'lavender'"
+        [class.scrapbook-stamp]="item.accent === 'primary'"
+        [class.scrapbook-paperclip]="item.accent !== 'primary'"
+        role="listitem"
+      >
+        <p class="role-card__label">{{ item.label }}</p>
+        <h3>{{ item.role }}</h3>
+        <p class="role-card__fit">{{ item.fitStatement }}</p>
+        <ul aria-label="Evidence points · evidências">
+          @for (capability of item.capabilities; track capability) {
+            <li>{{ capability }}</li>
+          }
+        </ul>
+        <a class="role-card__cta" [href]="item.ctaHref">{{ item.ctaText }}</a>
+      </article>
+    }
+  </div>
+</section>

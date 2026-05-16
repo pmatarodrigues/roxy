@@ -1,0 +1,33 @@
+<section id="side-projects" aria-labelledby="side-projects-title" class="side-projects">
+  <header class="side-projects__header scrapbook-paper scrapbook-stamp scrapbook-doodle-wave">
+    <p class="side-projects__eyebrow">Projetos & hobbies · beyond benchwork</p>
+    <h2 id="side-projects-title">
+      Scrapbook board: creative practice / prática criativa com impacto
+    </h2>
+    <p class="side-projects__intro">
+      Each block links hobby + communication outcomes, mostrando como ciência, design e comunidade
+      se conectam.
+    </p>
+  </header>
+
+  <div class="scribble-divider side-projects__divider" aria-hidden="true"></div>
+
+  <div class="side-projects__grid">
+    @for (project of projects; track project.title) {
+      <article
+        class="project-card scrapbook-paper scrapbook-ticket-corner"
+        [class.scrapbook-paper--tilt-left]="project.tilt === 'left'"
+        [class.scrapbook-paper--tilt-right]="project.tilt === 'right'"
+        [class.scrapbook-stamp]="project.tilt === 'left'"
+        [class.scrapbook-paperclip]="project.tilt === 'right'"
+      >
+        <p class="project-card__discipline">{{ project.disciplineLabel }}</p>
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <p class="project-card__summary">{{ project.summary }}</p>
+        <p class="project-card__skill">
+          <strong>{{ project.impactLabel }}:</strong> {{ project.communicationSkill }}
+        </p>
+      </article>
+    }
+  </div>
+</section>

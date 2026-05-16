@@ -1,0 +1,38 @@
+{
+  "id": "portfolio-redesign-02",
+  "seq": "02",
+  "title": "Redesign hero section narrative with EN/PT mixed editorial voice",
+  "status": "completed",
+  "depends_on": ["01"],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    "/Users/ctw04224/.config/opencode/context/core/standards/code-quality.md",
+    "/Users/ctw04224/.config/opencode/context/core/standards/documentation.md",
+    "/Users/ctw04224/.config/opencode/context/ui/web/ui-styling-standards.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-overview.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-stage-implementation.md"
+  ],
+  "reference_files": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/hero/hero-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/hero/hero-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/hero/hero-section.component.scss",
+    "/Users/ctw04224/Projects/roxy/src/styles/tokens.css"
+  ],
+  "acceptance_criteria": [
+    "Follows 4-stage design workflow",
+    "Responsive at all breakpoints",
+    "Hero layout reflects scrapbook/editorial collage style",
+    "Hero headings and CTA include EN/PT mixed copy",
+    "No token values changed in src/styles/tokens.css"
+  ],
+  "deliverables": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/hero/hero-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/hero/hero-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/hero/hero-section.component.scss"
+  ],
+  "agent_id": "coder-agent",
+  "started_at": "2026-05-14T16:31:00Z",
+  "completed_at": "2026-05-14T16:42:00Z",
+  "completion_summary": "Hero redesigned into scrapbook/editorial collage with EN/PT mixed messaging, layered notes and taped-paper motifs; preserved accessibility and kept tokens palette unchanged."
+}

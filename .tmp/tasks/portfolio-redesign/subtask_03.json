@@ -1,0 +1,37 @@
+{
+  "id": "portfolio-redesign-03",
+  "seq": "03",
+  "title": "Redesign talks and videos gallery in collage format",
+  "status": "completed",
+  "agent_id": "coder-agent",
+  "started_at": "2026-05-14T00:00:00Z",
+  "depends_on": ["01"],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    "/Users/ctw04224/.config/opencode/context/core/standards/code-quality.md",
+    "/Users/ctw04224/.config/opencode/context/ui/web/ui-styling-standards.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-overview.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-stage-implementation.md"
+  ],
+  "reference_files": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/videos/video-gallery.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/videos/video-gallery.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/videos/video-gallery.component.scss",
+    "/Users/ctw04224/Projects/roxy/src/styles/tokens.css"
+  ],
+  "acceptance_criteria": [
+    "Follows 4-stage design workflow",
+    "Responsive at all breakpoints",
+    "Video cards and section framing match scrapbook/editorial visual language",
+    "Section includes EN/PT mixed heading or labels",
+    "No token values changed in src/styles/tokens.css"
+  ],
+  "deliverables": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/videos/video-gallery.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/videos/video-gallery.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/videos/video-gallery.component.scss"
+  ],
+  "completed_at": "2026-05-14T00:00:00Z",
+  "completion_summary": "Redesigned videos section into scrapbook/editorial collage style with EN/PT labels; preserved filtering behavior and accessibility semantics across TS/HTML/SCSS."
+}

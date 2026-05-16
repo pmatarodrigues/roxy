@@ -1,0 +1,18 @@
+<section class="blog-post">
+  <div class="blog-post__inner">
+    <a class="blog-post__back" routerLink="/">← Back to portfolio</a>
+
+    @if (post$ | async; as post) {
+      <header class="blog-post__header">
+        <p class="blog-post__date">{{ formatDate(post.date) }}</p>
+        <h1>{{ post.title }}</h1>
+        <p class="blog-post__excerpt">{{ post.excerpt }}</p>
+      </header>
+
+      <article class="blog-post__content" [innerHTML]="post.html"></article>
+    } @else {
+      <h1>Post not found</h1>
+      <p>This article is unavailable right now.</p>
+    }
+  </div>
+</section>

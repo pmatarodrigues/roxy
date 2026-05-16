@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main,
+section {
+  scroll-margin-top: 7.5rem;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+summary {
+  min-block-size: 44px;
+}
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

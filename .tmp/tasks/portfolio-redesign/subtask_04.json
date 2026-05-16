@@ -1,0 +1,37 @@
+{
+  "id": "portfolio-redesign-04",
+  "seq": "04",
+  "title": "Redesign projects and hobbies board with scrapbook blocks",
+  "status": "completed",
+  "depends_on": ["01"],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    "/Users/ctw04224/.config/opencode/context/core/standards/code-quality.md",
+    "/Users/ctw04224/.config/opencode/context/ui/web/ui-styling-standards.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-overview.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-stage-implementation.md"
+  ],
+  "reference_files": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/side-projects/side-projects-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/side-projects/side-projects-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/side-projects/side-projects-section.component.scss",
+    "/Users/ctw04224/Projects/roxy/src/styles/tokens.css"
+  ],
+  "acceptance_criteria": [
+    "Follows 4-stage design workflow",
+    "Responsive at all breakpoints",
+    "Projects/hobbies board uses scrapbook/editorial card and divider motifs",
+    "Section includes EN/PT mixed copy for hobby and impact framing",
+    "No token values changed in src/styles/tokens.css"
+  ],
+  "deliverables": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/side-projects/side-projects-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/side-projects/side-projects-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/side-projects/side-projects-section.component.scss"
+  ],
+  "agent_id": "coder-agent",
+  "started_at": "2026-05-14T00:00:00Z",
+  "completed_at": "2026-05-14T00:00:00Z",
+  "completion_summary": "Redesigned side-projects into scrapbook board with EN/PT copy and shared utility reuse"
+}

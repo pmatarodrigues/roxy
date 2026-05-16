@@ -1,0 +1,242 @@
+:host {
+  display: block;
+  background: var(--accent-coral-light);
+  padding: var(--space-20) var(--space-6);
+}
+
+.transition {
+  width: min(100%, var(--container-max));
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.transition__header {
+  max-width: 64ch;
+}
+
+.transition__eyebrow {
+  margin: 0;
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: oklch(1 0 0 / 0.7);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  font-size: var(--step--2);
+}
+
+h2 {
+  margin-top: var(--space-3);
+  max-width: 30ch;
+}
+
+.transition__lede {
+  margin: var(--space-3) 0 0;
+  max-width: 58ch;
+  color: var(--muted-foreground);
+  font-size: var(--step--1);
+  line-height: 1.65;
+}
+
+.transition__divider {
+  margin-top: var(--space-2);
+}
+
+/* ── Timeline — scrapbook journey cards ───────────────────── */
+
+.transition__timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.transition-step {
+  position: relative;
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: oklch(1 0 0 / 0.65);
+  min-height: 16.5rem;
+  transition:
+    background-color var(--motion-base) var(--ease-standard),
+    transform var(--motion-fast) var(--ease-standard);
+}
+
+.transition-step.scrapbook-paperclip::after {
+  right: 0.78rem;
+  top: 0.7rem;
+}
+
+.transition-step:hover {
+  background: oklch(1 0 0 / 0.85);
+  transform: translateY(-2px);
+}
+
+.transition-step__stage {
+  margin: 0;
+  display: inline-flex;
+  width: fit-content;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  border: 1px dashed oklch(0.22 0.03 258 / 0.2);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: var(--step--2);
+  color: var(--muted-foreground);
+}
+
+.transition-step__number {
+  position: absolute;
+  right: var(--space-4);
+  bottom: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  opacity: 0.32;
+}
+
+.transition-step:nth-child(1) {
+  border-top: 3px solid var(--primary);
+}
+
+.transition-step:nth-child(1) .transition-step__number {
+  color: var(--primary);
+}
+
+.transition-step:nth-child(2) {
+  border-top: 3px solid var(--accent-coral);
+}
+
+.transition-step:nth-child(2) .transition-step__number {
+  color: var(--accent-coral);
+}
+
+.transition-step:nth-child(3) {
+  border-top: 3px solid var(--accent-sage);
+}
+
+.transition-step:nth-child(3) .transition-step__number {
+  color: var(--accent-sage);
+}
+
+.transition-step:nth-child(4) {
+  border-top: 3px solid var(--accent-lavender);
+}
+
+.transition-step:nth-child(4) .transition-step__number {
+  color: var(--accent-lavender);
+}
+
+.transition-step:nth-child(2n) {
+  margin-top: var(--space-5);
+}
+
+.transition-step__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.transition-step__year {
+  margin: 0;
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.12rem 0.4rem;
+  border-radius: var(--radius-sm);
+  background: oklch(1 0 0 / 0.62);
+  color: var(--muted-foreground);
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+}
+
+h3 {
+  margin: 0;
+  font-size: var(--step-1);
+}
+
+.transition-step__desc {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: var(--step--1);
+  line-height: 1.62;
+}
+
+.transition-step__pivot {
+  margin: var(--space-2) 0 0;
+  padding-top: var(--space-2);
+  border-top: 1px dashed oklch(0.22 0.03 258 / 0.22);
+  color: var(--surface-foreground);
+  font-size: var(--step--1);
+  font-weight: 500;
+  line-height: 1.58;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+
+@media (min-width: 1025px) {
+  .transition__timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+
+  .transition-step {
+    min-height: 17.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .transition__timeline {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .transition-step {
+    min-height: auto;
+    padding: var(--space-4);
+  }
+
+  .transition-step:nth-child(2n) {
+    margin-top: 0;
+  }
+
+  .transition-step__number {
+    font-size: var(--step-2);
+    right: var(--space-3);
+    bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: var(--space-10) var(--space-3);
+  }
+
+  .transition {
+    gap: var(--space-6);
+  }
+
+  .transition-step__stage {
+    letter-spacing: 0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-step:hover {
+    transform: none;
+  }
+}

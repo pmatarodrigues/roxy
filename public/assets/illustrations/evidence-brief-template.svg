@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence brief template</title>
+  <desc id="desc">Structured one-page template for translating oncology evidence into concise narrative blocks.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="110" y="70" width="980" height="535" fill="#fcfdff" stroke="#d7dfea"/>
+  <rect x="140" y="110" width="920" height="70" fill="#f3f7ff"/>
+  <rect x="140" y="210" width="430" height="160" fill="#ffffff" stroke="#d9dfec"/>
+  <rect x="630" y="210" width="430" height="160" fill="#ffffff" stroke="#d9dfec"/>
+  <rect x="140" y="390" width="920" height="180" fill="#ffffff" stroke="#d9dfec"/>
+  <text x="170" y="154" fill="#253450" font-size="30" font-family="Arial">Evidence Brief Layout</text>
+  <text x="170" y="250" fill="#2f3c58" font-size="24" font-family="Arial">Clinical question</text>
+  <text x="660" y="250" fill="#2f3c58" font-size="24" font-family="Arial">Key findings</text>
+  <text x="170" y="430" fill="#2f3c58" font-size="24" font-family="Arial">Implications and communication cues</text>
+  <line x1="170" y1="274" x2="530" y2="274" stroke="#8ca0c7" stroke-width="3"/>
+  <line x1="660" y1="274" x2="1020" y2="274" stroke="#8ca0c7" stroke-width="3"/>
+  <line x1="170" y1="454" x2="1020" y2="454" stroke="#8ca0c7" stroke-width="3"/>
+</svg>

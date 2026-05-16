@@ -1,0 +1,37 @@
+{
+  "id": "portfolio-redesign-07",
+  "seq": "07",
+  "title": "Redesign role-fit section for target roles clarity",
+  "status": "completed",
+  "depends_on": ["01"],
+  "parallel": true,
+  "suggested_agent": "OpenFrontendSpecialist",
+  "context_files": [
+    "/Users/ctw04224/.config/opencode/context/core/standards/code-quality.md",
+    "/Users/ctw04224/.config/opencode/context/ui/web/ui-styling-standards.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-overview.md",
+    "/Users/ctw04224/.config/opencode/context/core/workflows/design-iteration-stage-implementation.md"
+  ],
+  "reference_files": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/role-fit/role-fit-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/role-fit/role-fit-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/role-fit/role-fit-section.component.scss",
+    "/Users/ctw04224/Projects/roxy/src/styles/tokens.css"
+  ],
+  "acceptance_criteria": [
+    "Follows 4-stage design workflow",
+    "Responsive at all breakpoints",
+    "Role-fit section clearly frames fit for medical writer, MSL, and science communication",
+    "Section labels and CTA include EN/PT mixed microcopy",
+    "No token values changed in src/styles/tokens.css"
+  ],
+  "deliverables": [
+    "/Users/ctw04224/Projects/roxy/src/app/sections/role-fit/role-fit-section.component.ts",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/role-fit/role-fit-section.component.html",
+    "/Users/ctw04224/Projects/roxy/src/app/sections/role-fit/role-fit-section.component.scss"
+  ],
+  "agent_id": "coder-agent",
+  "started_at": "2026-05-14T16:31:00Z",
+  "completed_at": "2026-05-14T16:42:00Z",
+  "completion_summary": "Role-fit section reframed for Medical Writer/MSL/Science Communication paths using scrapbook cards, EN/PT microcopy, role-specific evidence bullets, and section CTAs."
+}

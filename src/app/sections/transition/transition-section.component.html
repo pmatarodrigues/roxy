@@ -1,0 +1,39 @@
+<section id="journey" aria-labelledby="transition-title" class="transition">
+  <header class="transition__header">
+    <p class="transition__eyebrow">Career journey · jornada de transição</p>
+    <h2 id="transition-title">
+      From PhD bench to med comm bridge · da bancada à comunicação em saúde
+    </h2>
+    <p class="transition__lede">
+      Uma timeline em scrapbook do pivot: mesma ciência de base, linguagem mais clara, impacto mais
+      amplo.
+    </p>
+  </header>
+
+  <div class="scribble-divider transition__divider" aria-hidden="true"></div>
+
+  <ol class="transition__timeline" aria-label="Career journey milestones · marcos da jornada">
+    @for (item of milestones; track item.title; let i = $index) {
+      <li
+        class="transition-step scrapbook-paper scrapbook-paperclip"
+        [class.scrapbook-paper--tilt-left]="i % 2 === 0"
+        [class.scrapbook-paper--tilt-right]="i % 2 !== 0"
+        [class.scrapbook-ticket-corner]="i % 2 === 0"
+        [class.scrapbook-stamp]="i % 2 !== 0"
+      >
+        <p class="transition-step__stage">{{ item.stageLabel }}</p>
+        <time class="transition-step__year" [attr.datetime]="item.dateTime">{{
+          item.periodLabel
+        }}</time>
+        <div class="transition-step__content">
+          <h3>{{ item.title }}</h3>
+          <p class="transition-step__desc">{{ item.description }}</p>
+          <p class="transition-step__pivot">{{ item.pivotNote }}</p>
+        </div>
+        <span class="transition-step__number" aria-hidden="true">{{
+          (i + 1).toString().padStart(2, '0')
+        }}</span>
+      </li>
+    }
+  </ol>
+</section>

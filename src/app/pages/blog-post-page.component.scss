@@ -1,0 +1,110 @@
+:host {
+  display: block;
+}
+
+.blog-post {
+  background: var(--background);
+  min-block-size: calc(100dvh - 10rem);
+  padding: var(--space-16) var(--space-6) var(--space-24);
+}
+
+.blog-post__inner {
+  width: min(100%, var(--container-max));
+  margin-inline: auto;
+}
+
+.blog-post__back {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.5rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blog-post__back:hover {
+  background: var(--primary-light);
+}
+
+.blog-post__header {
+  margin-top: var(--space-8);
+  max-width: var(--reading-max);
+}
+
+.blog-post__date {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  margin-top: var(--space-3);
+}
+
+.blog-post__excerpt {
+  margin-top: var(--space-3);
+  color: var(--muted-foreground);
+  font-size: var(--step-0);
+  line-height: 1.7;
+  max-width: 64ch;
+}
+
+.blog-post__content {
+  margin-top: var(--space-10);
+  max-width: 68ch;
+  line-height: 1.8;
+}
+
+.blog-post__content :where(h2, h3, h4) {
+  margin-top: var(--space-8);
+}
+
+.blog-post__content :where(p, ul, ol, blockquote, pre) {
+  margin-top: var(--space-4);
+}
+
+.blog-post__content :where(ul, ol) {
+  padding-inline-start: var(--space-6);
+}
+
+.blog-post__content :where(blockquote) {
+  margin-inline: 0;
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--primary);
+  color: var(--muted-foreground);
+}
+
+.blog-post__content :where(code) {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  background: var(--muted);
+  padding: 0.1em 0.35em;
+  border-radius: 0.35rem;
+}
+
+.blog-post__content :where(pre code) {
+  display: block;
+  padding: var(--space-4);
+  overflow-x: auto;
+}
+
+.blog-post__content :where(img) {
+  max-inline-size: 100%;
+  block-size: auto;
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+    padding: var(--space-10) var(--space-4) var(--space-16);
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-post {
+    padding: var(--space-8) var(--space-3) var(--space-12);
+  }
+}

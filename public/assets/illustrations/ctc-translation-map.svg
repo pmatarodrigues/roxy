@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">CTC translation map illustration</title>
+  <desc id="desc">Editorial diagram showing evidence translation from molecular data to clinical communication outputs.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="72" y="84" width="260" height="180" fill="#f6f8fb" stroke="#cfd6e2"/>
+  <rect x="470" y="84" width="260" height="180" fill="#f6f8fb" stroke="#cfd6e2"/>
+  <rect x="868" y="84" width="260" height="180" fill="#f6f8fb" stroke="#cfd6e2"/>
+  <rect x="72" y="408" width="260" height="180" fill="#f6f8fb" stroke="#cfd6e2"/>
+  <rect x="470" y="408" width="260" height="180" fill="#f6f8fb" stroke="#cfd6e2"/>
+  <rect x="868" y="408" width="260" height="180" fill="#f6f8fb" stroke="#cfd6e2"/>
+  <text x="98" y="142" fill="#28344d" font-size="28" font-family="Arial">Molecular signal</text>
+  <text x="494" y="142" fill="#28344d" font-size="28" font-family="Arial">Clinical context</text>
+  <text x="892" y="142" fill="#28344d" font-size="28" font-family="Arial">Audience framing</text>
+  <text x="98" y="466" fill="#28344d" font-size="28" font-family="Arial">Evidence brief</text>
+  <text x="494" y="466" fill="#28344d" font-size="28" font-family="Arial">Visual storyboard</text>
+  <text x="892" y="466" fill="#28344d" font-size="28" font-family="Arial">Talk delivery</text>
+  <path d="M332 174H470" stroke="#3a61d8" stroke-width="5"/>
+  <path d="M730 174H868" stroke="#3a61d8" stroke-width="5"/>
+  <path d="M998 264V408" stroke="#3a61d8" stroke-width="5"/>
+  <path d="M730 498H868" stroke="#3a61d8" stroke-width="5"/>
+  <path d="M332 498H470" stroke="#3a61d8" stroke-width="5"/>
+  <path d="M202 408V264" stroke="#3a61d8" stroke-width="5"/>
+  <circle cx="401" cy="174" r="10" fill="#ff5b3e"/>
+  <circle cx="799" cy="174" r="10" fill="#ff5b3e"/>
+  <circle cx="998" cy="336" r="10" fill="#ff5b3e"/>
+  <circle cx="799" cy="498" r="10" fill="#ff5b3e"/>
+  <circle cx="401" cy="498" r="10" fill="#ff5b3e"/>
+  <circle cx="202" cy="336" r="10" fill="#ff5b3e"/>
+</svg>

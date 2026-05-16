@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "generated": "2026-05-14T16:22:00Z",
+  "files": [
+    {
+      "library": "marked",
+      "package": "marked",
+      "topic": "angular21-browser-marked-integration",
+      "path": ".tmp/external-context/marked/angular21-browser-marked-integration.md",
+      "fetched": "2026-05-14T15:05:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://marked.js.org"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "angular-mixed-media-gallery-guidance-v20",
+      "path": ".tmp/external-context/angular/angular-mixed-media-gallery-guidance-v20.md",
+      "fetched": "2026-05-14T14:20:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "angular-docker-dev-preview-best-practices",
+      "path": ".tmp/external-context/angular/angular-docker-dev-preview-best-practices.md",
+      "fetched": "2026-05-14T13:00:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev"
+    },
+    {
+      "library": "Angular + Cloudflare",
+      "package": "angular-cloudflare",
+      "topic": "angular-spa-cloudflare-workers-pages-static-hosting",
+      "path": ".tmp/external-context/angular-cloudflare/angular-spa-cloudflare-workers-pages-static-hosting.md",
+      "fetched": "2026-05-14T12:00:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "angular-static-portfolio-v20",
+      "path": ".tmp/external-context/angular/angular-static-portfolio-v20.md",
+      "fetched": "2026-05-14T00:00:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "standalone component editing best practices, @for control flow, accessibility semantics, SCSS encapsulation",
+      "path": ".tmp/external-context/angular/angular-v17plus-standalone-editing-safe-template-patterns.md",
+      "fetched": "2026-05-14T16:10:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "standalone-component-templates",
+      "path": ".tmp/external-context/angular/standalone-component-templates.md",
+      "fetched": "2026-05-14T16:00:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev/reference/migrations/standalone"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "control-flow-if-for",
+      "path": ".tmp/external-context/angular/control-flow-if-for.md",
+      "fetched": "2026-05-14T16:00:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev/guide/templates/control-flow"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "template-accessibility-form-semantics",
+      "path": ".tmp/external-context/angular/template-accessibility-form-semantics.md",
+      "fetched": "2026-05-14T16:00:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev/best-practices/a11y"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "safe-iframe-usage",
+      "path": ".tmp/external-context/angular/safe-iframe-usage.md",
+      "fetched": "2026-05-14T16:00:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev/best-practices/security"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "standalone-component-template-semantics-and-control-flow",
+      "path": ".tmp/external-context/angular/standalone-template-semantics.md",
+      "fetched": "2026-05-14T16:22:00Z",
+      "source": "Context7 API",
+      "official_docs": "https://angular.dev/guide/templates"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "template-accessibility-best-practices",
+      "path": ".tmp/external-context/angular/template-accessibility-best-practices.md",
+      "fetched": "2026-05-14T16:22:00Z",
+      "source": "Context7 API + official docs fallback",
+      "official_docs": "https://angular.dev/best-practices/a11y"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "style-guide-naming-conventions-component-members-constants",
+      "path": ".tmp/external-context/angular/style-guide-naming-members-constants.md",
+      "fetched": "2026-05-14T16:22:00Z",
+      "source": "Context7 API + official docs fallback",
+      "official_docs": "https://angular.dev/style-guide"
+    },
+    {
+      "library": "Angular",
+      "package": "angular",
+      "topic": "scss-component-style-patterns",
+      "path": ".tmp/external-context/angular/scss-component-style-patterns.md",
+      "fetched": "2026-05-14T16:22:00Z",
+      "source": "Context7 API + official docs fallback",
+      "official_docs": "https://angular.dev/guide/components/styling"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+name: roxy-portfolio
+
+services:
+  dev:
+    profiles: ['dev']
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '4200:4200'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm start -- --host=0.0.0.0 --poll=2000
+
+  preview:
+    profiles: ['preview']
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
