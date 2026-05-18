@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface HeroNote {
   readonly label: string;
@@ -40,6 +41,7 @@ const FOCUS_TAGS: readonly FocusTag[] = [
 @Component({
   selector: 'app-hero-section',
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
