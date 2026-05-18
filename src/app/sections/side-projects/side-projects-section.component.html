@@ -4,29 +4,20 @@
     <h2 id="side-projects-title">
       Postais Para Cientistas
     </h2>
-    <!--<p class="side-projects__intro">
-      se conectam.
-    </p>-->
   </header>
 
   <div class="scribble-divider side-projects__divider" aria-hidden="true"></div>
 
-  <div class="side-projects__grid">
-    @for (project of projects; track project.title) {
-      <article
-        class="project-card scrapbook-paper scrapbook-ticket-corner"
-        [class.scrapbook-paper--tilt-left]="project.tilt === 'left'"
-        [class.scrapbook-paper--tilt-right]="project.tilt === 'right'"
-        [class.scrapbook-stamp]="project.tilt === 'left'"
-        [class.scrapbook-paperclip]="project.tilt === 'right'"
-      >
-        <p class="project-card__discipline">{{ project.disciplineLabel }}</p>
-        <h3 class="project-card__title">{{ project.title }}</h3>
-        <p class="project-card__summary">{{ project.summary }}</p>
-        <p class="project-card__skill">
-          <strong>{{ project.impactLabel }}:</strong> {{ project.communicationSkill }}
-        </p>
-      </article>
+  <div class="postcards-filmstrip" aria-label="Galeria de postais para cientistas">
+    @for (card of postcards; track card.id) {
+      <figure class="postcard scrapbook-paper">
+        <img
+          [src]="card.imagePath"
+          [alt]="card.altText"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
     }
   </div>
 </section>
