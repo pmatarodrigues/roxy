@@ -1,44 +1,58 @@
 [
   {
+    "id": "video-V9dvX5Unx_w",
+    "mediaType": "video",
+    "title": "Label-free Microfluidic-based Isolation of Circulating Tumour Cells from GI Cancer",
+    "summary": "Research presentation on label-free microfluidic isolation of circulating tumour cells from gastrointestinal cancer patients, covering device design and clinical application.",
+    "language": "EN",
+    "topic": "circulating-tumour-cells",
+    "audience": "researchers",
+    "platform": "youtube",
+    "embedId": "V9dvX5Unx_w",
+    "publishedAt": "2024-01-01",
+    "durationMinutes": 5,
+    "tags": ["ctc", "microfluidics", "label-free", "gastrointestinal-cancer"]
+  },
+  {
     "id": "video-pRwuZXAaAsc",
     "mediaType": "video",
-    "title": "Video Title Here",
-    "summary": "Short summary of this video.",
-    "language": "PT",
+    "title": "Is Eureka Outdated?",
+    "summary": "Science outreach talk questioning the myth of the lone-genius eureka moment and what modern scientific discovery actually looks like.",
+    "language": "EN",
     "topic": "science-outreach",
     "audience": "general-public",
     "platform": "youtube",
     "embedId": "pRwuZXAaAsc",
     "publishedAt": "2024-01-01",
     "durationMinutes": 5,
-    "tags": ["science-outreach"]
+    "tags": ["science-outreach", "philosophy-of-science", "public-engagement"]
   },
   {
     "id": "video-NG4rcSQa3qI",
     "mediaType": "video",
-    "title": "Video Title Here",
-    "summary": "Short summary of this video.",
+    "title": "Festiva FIC.A 2022 — Jogo das CTCs",
+    "summary": "Science outreach activity at Festiva FIC.A 2022: an interactive game explaining circulating tumour cells to general audiences.",
     "language": "PT",
     "topic": "science-outreach",
     "audience": "general-public",
     "platform": "youtube",
     "embedId": "NG4rcSQa3qI",
-    "publishedAt": "2024-01-01",
+    "publishedAt": "2022-01-01",
     "durationMinutes": 5,
-    "tags": ["science-outreach"]
+    "tags": ["science-outreach", "ctc", "portuguese", "festival", "public-engagement"]
   },
   {
     "id": "video-WIK1-JY3HuQ",
     "mediaType": "video",
-    "title": "Video Title Here",
-    "summary": "Short summary of this video.",
+    "title": "18 de maio de 2026",
+    "summary": "Short video published on 18 de maio de 2026.",
     "language": "PT",
     "topic": "science-outreach",
     "audience": "general-public",
     "platform": "youtube",
     "embedId": "WIK1-JY3HuQ",
-    "publishedAt": "2024-01-01",
+    "publishedAt": "2026-05-18",
     "durationMinutes": 1,
-    "tags": ["science-outreach"]
+    "tags": ["science-outreach", "portuguese"]
   }
 ]
