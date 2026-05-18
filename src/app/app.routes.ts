@@ -13,7 +13,7 @@ export const routes: Routes = [
     component: BlogPostPageComponent,
   },
   {
-    path: 'publicacoes',
+    path: 'publications',
     loadComponent: () =>
       import('./pages/publications-page.component').then(
         (m) => m.PublicationsPageComponent,
