@@ -135,13 +135,13 @@ h1 {
 }
 
 .hero-action--secondary {
-  border: 1.5px solid oklch(0.68 0.16 28);
+  border: 1.5px solid var(--accent-coral);
   background: transparent;
   color: oklch(0.52 0.14 28);
 }
 
 .hero-action--secondary:hover {
-  background: oklch(0.94 0.04 28);
+  background: var(--accent-coral-light);
   border-color: oklch(0.62 0.16 28);
 }
 
