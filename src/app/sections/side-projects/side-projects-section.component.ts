@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
 
 interface Postcard {
   readonly id: string;
@@ -6,23 +9,13 @@ interface Postcard {
   readonly altText: string;
 }
 
-const POSTCARDS: readonly Postcard[] = [
-  {
-    id: 'postcard-01',
-    imagePath: 'assets/postcards/postcard-01.jpg',
-    altText: 'Postal para cientistas 1',
-  },
-  {
-    id: 'postcard-02',
-    imagePath: 'assets/postcards/postcard-02.jpg',
-    altText: 'Postal para cientistas 2',
-  },
-  {
-    id: 'postcard-03',
-    imagePath: 'assets/postcards/postcard-03.jpg',
-    altText: 'Postal para cientistas 3',
-  },
-];
+function filenameToPostcard(filename: string, index: number): Postcard {
+  return {
+    id: `postcard-${index + 1}`,
+    imagePath: `assets/postcards/${filename}`,
+    altText: `Postal para cientistas ${index + 1}`,
+  };
+}
 
 @Component({
   selector: 'app-side-projects-section',
@@ -31,5 +24,12 @@ const POSTCARDS: readonly Postcard[] = [
   styleUrl: './side-projects-section.component.scss',
 })
 export class SideProjectsSectionComponent {
-  protected readonly postcards = POSTCARDS;
+  private readonly http = inject(HttpClient);
+
+  protected readonly postcards = toSignal(
+    this.http
+      .get<string[]>('assets/postcards/manifest.json')
+      .pipe(map(files => files.map(filenameToPostcard))),
+    { initialValue: [] as Postcard[] },
+  );
 }

@@ -45,3 +45,6 @@ Thumbs.db
 
 # Superpowers brainstorm sessions
 .superpowers/
+
+# Generated at build time
+public/assets/postcards/manifest.json

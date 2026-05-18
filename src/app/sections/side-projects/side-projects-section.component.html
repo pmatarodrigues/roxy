@@ -9,7 +9,7 @@
   <div class="scribble-divider side-projects__divider" aria-hidden="true"></div>
 
   <div class="postcards-filmstrip" aria-label="Galeria de postais para cientistas">
-    @for (card of postcards; track card.id) {
+    @for (card of postcards(); track card.id) {
       <figure class="postcard scrapbook-paper">
         <img
           [src]="card.imagePath"
