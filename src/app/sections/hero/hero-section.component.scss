@@ -124,7 +124,7 @@ h1 {
 }
 
 .hero-action--primary {
-  border-color: oklch(0.72 0.12 290);
+  border: 1.5px solid oklch(0.72 0.12 290);
   background: oklch(0.92 0.05 290);
   color: oklch(0.42 0.14 290);
 }
@@ -135,7 +135,7 @@ h1 {
 }
 
 .hero-action--secondary {
-  border-color: oklch(0.68 0.16 28);
+  border: 1.5px solid oklch(0.68 0.16 28);
   background: transparent;
   color: oklch(0.52 0.14 28);
 }
