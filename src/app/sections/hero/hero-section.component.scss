@@ -124,13 +124,25 @@ h1 {
 }
 
 .hero-action--primary {
-  border-color: var(--primary);
-  background: var(--primary);
-  color: var(--primary-foreground);
+  border-color: oklch(0.72 0.12 290);
+  background: oklch(0.92 0.05 290);
+  color: oklch(0.42 0.14 290);
 }
 
 .hero-action--primary:hover {
-  background: oklch(0.5 0.13 178);
+  background: oklch(0.88 0.07 290);
+  border-color: oklch(0.65 0.14 290);
+}
+
+.hero-action--secondary {
+  border-color: oklch(0.68 0.16 28);
+  background: transparent;
+  color: oklch(0.52 0.14 28);
+}
+
+.hero-action--secondary:hover {
+  background: oklch(0.94 0.04 28);
+  border-color: oklch(0.62 0.16 28);
 }
 
 .hero-notes {
