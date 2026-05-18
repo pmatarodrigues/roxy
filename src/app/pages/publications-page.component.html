@@ -1,0 +1,42 @@
+<article class="publications">
+  <div class="publications__inner">
+    <a class="publications__back" routerLink="/">← Início</a>
+
+    <header class="publications__header">
+      <p class="publications__eyebrow">Ciência · Research</p>
+      <h1>Publicações Científicas</h1>
+    </header>
+
+    <div class="scribble-divider publications__divider" aria-hidden="true"></div>
+
+    <ol class="pub-list" reversed>
+      @for (pub of publications; track pub.id) {
+        <li class="pub-item scrapbook-paper">
+          <div class="pub-item__meta">
+            <span class="meta-tag meta-tag--type">{{ getTypeLabel(pub.type) }}</span>
+            <span class="meta-tag">{{ pub.year }}</span>
+          </div>
+
+          <p class="pub-item__authors">{{ pub.authors }}</p>
+
+          <h2 class="pub-item__title">
+            <a [href]="pub.url" target="_blank" rel="noopener noreferrer">
+              {{ pub.title }}
+            </a>
+          </h2>
+
+          <p class="pub-item__journal">{{ pub.journal }}</p>
+
+          @if (pub.doi) {
+            <p class="pub-item__doi">
+              <span>DOI:</span>
+              <a [href]="pub.url" target="_blank" rel="noopener noreferrer">
+                {{ pub.doi }}
+              </a>
+            </p>
+          }
+        </li>
+      }
+    </ol>
+  </div>
+</article>

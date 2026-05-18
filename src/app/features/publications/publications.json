@@ -1,0 +1,62 @@
+[
+  {
+    "id": "pub-2025-advanced-microfluidics",
+    "authors": "Adriana Carneiro, et al.",
+    "title": "Advanced Microfluidics for Single Cell-Based Cancer Research",
+    "journal": "Advanced Science",
+    "year": 2025,
+    "type": "article",
+    "url": "https://doi.org/10.1002/advs.202500975",
+    "doi": "10.1002/advs.202500975"
+  },
+  {
+    "id": "pub-2024-false-positives-ctc",
+    "authors": "Adriana Carneiro, et al.",
+    "title": "Minimizing false positives for CTC identification",
+    "journal": "Analytica Chimica Acta",
+    "year": 2024,
+    "type": "article",
+    "url": "https://doi.org/10.1016/j.aca.2023.342165",
+    "doi": "10.1016/j.aca.2023.342165"
+  },
+  {
+    "id": "pub-2024-aml-blasts",
+    "authors": "Alexandra Teixeira, Maria Sousa-Silva, Alexandre Chícharo, Kevin Oliveira, André Moura, Adriana Carneiro, Paulina Piairo, Hugo Águas, Belém Sampaio-Marques, Isabel Castro, José Mariz, Paula Ludovico, Sara Abalde-Cela and Lorena Diéguez",
+    "title": "Isolation of acute myeloid leukemia blasts from blood using a microfluidic device",
+    "journal": "Analyst",
+    "year": 2024,
+    "type": "article",
+    "url": "https://doi.org/10.1039/D4AN00158C",
+    "doi": "10.1039/D4AN00158C"
+  },
+  {
+    "id": "pub-2022-emt-ctc",
+    "authors": "Adriana Carneiro, et al.",
+    "title": "Discriminating Epithelial to Mesenchymal Transition Phenotypes in Circulating Tumor Cells Isolated from Advanced Gastrointestinal Cancer Patients",
+    "journal": "Cells",
+    "year": 2022,
+    "type": "article",
+    "url": "https://doi.org/10.3390/cells11030376",
+    "doi": "10.3390/cells11030376"
+  },
+  {
+    "id": "pub-2022-liquid-biopsy-chapter",
+    "authors": "Alexandra Teixeira*, Adriana Carneiro*, Paulina Piairo*, et al.",
+    "title": "Advances in Microfluidics for the Implementation of Liquid Biopsy in Clinical Routine",
+    "journal": "Advances in Experimental Medicine and Biology",
+    "year": 2022,
+    "type": "book-chapter",
+    "url": "https://doi.org/10.1007/978-3-031-04039-9_22",
+    "doi": "10.1007/978-3-031-04039-9_22"
+  },
+  {
+    "id": "pub-2020-ctc-portugal",
+    "authors": "Adriana Carneiro, Paulina Piairo, Lorena Diéguez, Luís Lima",
+    "title": "Circulating Tumour Cells: A Portuguese Contribution Towards Precision Medicine",
+    "journal": "Revista Portuguesa de Cirurgia",
+    "year": 2020,
+    "type": "opinion",
+    "url": "https://revista.spcir.com/index.php/spcir/article/view/806",
+    "doi": null
+  }
+]

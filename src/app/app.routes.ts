@@ -13,6 +13,14 @@ export const routes: Routes = [
     component: BlogPostPageComponent,
   },
   {
+    path: 'publicacoes',
+    loadComponent: () =>
+      import('./pages/publications-page.component').then(
+        (m) => m.PublicationsPageComponent,
+      ),
+    title: 'Publicações Científicas',
+  },
+  {
     path: '**',
     redirectTo: '',
   },
