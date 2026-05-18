@@ -13,7 +13,7 @@
 .hero__board {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  grid-template-columns: 1fr;
   gap: var(--space-6);
   align-items: start;
 }
@@ -146,11 +146,12 @@ h1 {
 }
 
 .hero-notes {
-  position: relative;
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1rem;
+  width: 44%;
   z-index: 3;
-  display: grid;
-  gap: var(--space-4);
-  margin-top: var(--space-4);
+  margin-top: 0;
 }
 
 .hero-note {
@@ -258,18 +259,6 @@ h1 {
     grid-template-columns: 1fr;
     gap: var(--space-5);
   }
-
-  .hero-notes {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 0;
-  }
-
-  .hero-note,
-  .hero-note:nth-child(2),
-  .hero-note:nth-child(3) {
-    transform: none;
-  }
-
 }
 
 @media (max-width: 768px) {
@@ -282,7 +271,9 @@ h1 {
   }
 
   .hero-notes {
-    grid-template-columns: 1fr;
+    position: static;
+    width: 100%;
+    margin-top: var(--space-4);
   }
 
   .hero__actions {
