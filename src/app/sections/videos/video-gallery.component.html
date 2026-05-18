@@ -1,6 +1,6 @@
 <section id="videos" aria-labelledby="videos-title" class="video-gallery">
   <header class="video-gallery__header">
-    <p class="video-gallery__eyebrow">Media portfolio / Portfólio de mídia</p>
+    <!--<p class="video-gallery__eyebrow">Media portfolio / Portfólio de mídia</p>-->
     <h2 id="videos-title">3 Minutos de Ciência</h2>
     <p class="video-gallery__desc">
       Vídeos e Apresentações
@@ -39,7 +39,7 @@
     </label>
 
     <label class="video-filters__search">
-      <span>Search / Buscar</span>
+      <span>Pesquisar</span>
       <input
         type="search"
         [value]="searchQuery()"
@@ -110,7 +110,6 @@
 
             <footer class="media-card__footer">
               <span>{{ formatPublicationDate(media.publishedAt) }}</span>
-              <span>{{ getAudienceLabel(media.audience) }}</span>
               @if (isVideo(media)) {
                 <span>{{ media.durationMinutes }} min / duração</span>
               }

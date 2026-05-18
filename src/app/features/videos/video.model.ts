@@ -7,8 +7,6 @@ export type VideoTopic =
   | 'clinical-evidence'
   | 'science-outreach';
 
-export type VideoAudience = 'clinicians' | 'researchers' | 'children' | 'general-public';
-
 export type VideoPlatform = 'youtube' | 'vimeo';
 
 export type PortfolioMediaType = 'video' | 'illustration';
@@ -20,9 +18,7 @@ interface BasePortfolioMedia {
   summary: string;
   language: VideoLanguage;
   topic: VideoTopic;
-  audience: VideoAudience;
   publishedAt: string;
-  tags: readonly string[];
 }
 
 export interface PortfolioVideo extends BasePortfolioMedia {

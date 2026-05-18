@@ -16,7 +16,6 @@ const includesQuery = (media: PortfolioMedia, query: string): boolean => {
     media.title,
     media.originalTitle ?? '',
     media.summary,
-    ...media.tags,
   ].map((field) => field.toLowerCase());
 
   return searchableFields.some((field) => field.includes(query));

@@ -8,7 +8,6 @@ import {
   PortfolioMedia,
   PortfolioMediaType,
   PortfolioVideo,
-  VideoAudience,
   VideoLanguageFilter,
   VideoTopic,
   VideoTopicFilter,
@@ -35,7 +34,7 @@ const LANGUAGE_OPTIONS: readonly FilterOption<VideoLanguageFilter>[] = [
 ];
 
 const TOPIC_OPTIONS: readonly FilterOption<VideoTopicFilter>[] = [
-  { value: 'ALL', label: 'All topics / Todos os temas' },
+  { value: 'ALL', label: 'All topics' },
   {
     value: 'circulating-tumour-cells',
     label: 'Circulating tumour cells / Células tumorais circulantes',
@@ -52,13 +51,6 @@ const TOPIC_LABELS: Readonly<Record<VideoTopic, string>> = {
   microfluidics: 'Microfluidics',
   'clinical-evidence': 'Clinical evidence',
   'science-outreach': 'Science outreach',
-};
-
-const AUDIENCE_LABELS: Readonly<Record<VideoAudience, string>> = {
-  clinicians: 'Clinician audience',
-  researchers: 'Research audience',
-  children: 'Children audience',
-  'general-public': 'General public audience',
 };
 
 const MEDIA_TYPE_LABELS: Readonly<Record<PortfolioMediaType, string>> = {
@@ -145,10 +137,6 @@ export class VideoGalleryComponent {
 
   public getTopicLabel(topic: VideoTopic): string {
     return TOPIC_LABELS[topic];
-  }
-
-  public getAudienceLabel(audience: VideoAudience): string {
-    return AUDIENCE_LABELS[audience];
   }
 
   public getMediaTypeLabel(mediaType: PortfolioMediaType): string {
