@@ -3,35 +3,29 @@
     <article
       class="hero-card hero-card--intro hero-card--polaroid scrapbook-paper scrapbook-tape scrapbook-doodle-wave scrapbook-paper--tilt-left"
     >
-      <p class="hero-card__eyebrow">Portugal · Oncology + Microfluidics · EN / PT / DE</p>
+      <!--<p class="hero-card__eyebrow">Portugal · Oncology + Microfluidics · EN / PT / DE</p>-->
 
-      <h1 id="hero-title">Adriana Carneiro, PhD<br />science with voz própria</h1>
+      <h1 id="hero-title">Ciência Com Voz Própria</h1>
 
       <p class="hero-card__lede">
-        Biologist building bridge entre laboratório e decisão clínica — from liquid biopsy systems
-        to strategic medical communication.
+        Adriana Carneiro
       </p>
 
       <p class="hero-card__summary">
-        PhD em Oncologia focused on circulating tumour cells and GI cancers. Escrevo sobre ciência,
-        interesses e vida académica com linguagem clara, rigor e curiosidade.
+        Uma bióloga entusiasmada com doutoramento em oncologia que acredita que a ciência deve ser divertida e acessível a toda a comunidade. Bem-vindo ao meu local especial onde a ciência é comunicada de forma clara e divertida, sem nunca perder o rigor que lhe é exigida.
       </p>
 
-      <ul class="hero-card__tags" aria-label="Career transition focus">
+      <!--<ul class="hero-card__tags" aria-label="Career transition focus">
         @for (tag of focusTags; track tag.text) {
           <li>{{ tag.text }}</li>
         }
-      </ul>
+      </ul>-->
 
-      <div class="hero__actions">
-        <a class="hero-action hero-action--primary" href="#contact"
-          >Open to conversations · aberta a conversas</a
-        >
-        <a class="hero-action" href="#blog">Read writing · ler textos</a>
-      </div>
+      <p class="hero-mantra" aria-hidden="true">be curious · be kind · be bold · be yourself</p>
+
     </article>
 
-    <aside class="hero-notes" aria-label="Editorial scrapbook highlights">
+    <!--<aside class="hero-notes" aria-label="Editorial scrapbook highlights">
       @for (note of heroNotes; track note.title; let i = $index) {
         <article
           class="hero-note scrapbook-paper"
@@ -44,14 +38,37 @@
           <p>{{ note.summary }}</p>
         </article>
       }
+    </aside>-->
+
+    <aside class="hero-notes" aria-label="Editorial scrapbook highlights">
+      <div class="hero-note scrapbook-paper scrapbook-pin-note scrapbook-paper--tilt-left">
+        <p class="hero-note__label">Sugestão do Mês</p>
+        <h2>One text I recommend if you are new here</h2>
+        <p>Summary or LINK</p>
+      </div>
+      <!--@for (note of heroNotes; track note.title; let i = $index) {
+        <article
+          class="hero-note scrapbook-paper"
+          [class.scrapbook-paperclip]="i !== 1"
+          [class.scrapbook-stamp]="i === 1"
+          [class.scrapbook-ticket-corner]="i === 2"
+        >
+          <p class="hero-note__label">{{ note.label }}</p>
+          <h2>{{ note.title }}</h2>
+          <p>{{ note.summary }}</p>
+        </article>
+      }-->
     </aside>
 
-    <p class="hero-mantra" aria-hidden="true">be curious · be kind · be bold · be yourself</p>
+    <div class="hero-meta hero__actions">
+      <a class="hero-action hero-action--primary" href="#contact">
+        Disponível Para Conversar
+      </a>
 
-    <p class="hero-caption" aria-label="Positioning note">
-      <span class="hero-caption__ink">Field notes:</span>
-      ciência translacional + escrita pessoal sobre ideias, pesquisa e comunicação.
-    </p>
+      <a class="hero-action hero-action--primary" href="#contact">
+        Publicações
+      </a>
+    </div>
 
     <div class="scribble-divider" aria-hidden="true"></div>
 

@@ -24,8 +24,8 @@ import { VideoGalleryComponent } from '../sections/videos/video-gallery.componen
     <app-blog-section></app-blog-section>
     <app-side-projects-section></app-side-projects-section>
     <app-video-gallery></app-video-gallery>
-    <app-transition-section></app-transition-section>
-    <app-role-fit-section></app-role-fit-section>
+    <!-- <app-transition-section></app-transition-section>
+    // <app-role-fit-section></app-role-fit-section> -->
     <app-contact-section></app-contact-section>
   `,
 })

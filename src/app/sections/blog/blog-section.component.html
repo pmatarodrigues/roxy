@@ -1,11 +1,12 @@
 <section id="blog" aria-labelledby="blog-title" class="blog">
   <header class="blog__header scrapbook-doodle-wave">
-    <p class="blog__eyebrow">Writing desk · mesa de escrita</p>
-    <h2 id="blog-title">A personal page for science, interests, and everyday curiosity</h2>
+    <p class="blog__eyebrow">Mesa de Escrita</p>
+
+    <h2 id="blog-title">Vozes da Ciência</h2>
     <p class="blog__intro">
       Textos sobre oncologia, comunicação, hobbies e pequenas observações da vida em ciência.
     </p>
-    <div
+    <!--<div
       class="blog__newsletter scrapbook-paper scrapbook-tape scrapbook-paperclip scrapbook-paper--tilt-right"
     >
       <p class="blog__newsletter-title">Get monthly notes · receber notas mensais</p>
@@ -13,13 +14,8 @@
         One short email with new writing + one reflection from the month.
       </p>
       <a class="blog__newsletter-link" [href]="newsletterHref">Subscribe by email · subscrever</a>
-    </div>
+    </div>-->
   </header>
-
-  <div class="blog__postit scrapbook-paper scrapbook-pin-note scrapbook-paper--tilt-left">
-    <p class="blog__postit-title">sugestao do mes · monthly pick</p>
-    <p class="blog__postit-copy">One text I recommend if you are new here.</p>
-  </div>
 
   @if (latestPosts$ | async; as posts) {
     @if (posts.length === 0) {
