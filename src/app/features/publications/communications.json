@@ -1,0 +1,206 @@
+{
+  "oral": [
+    {
+      "id": "oral-2024-inl-3mt",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Introducing Molecular Analysis of Circulating Tumour Cells in the Clinic: Their Significance in Clonal Evolution and Immune Escape in Gastrointestinal Cancers",
+      "date": "April 22–24, 2024",
+      "event": "3 Minutes Thesis competition at INL Annual Research Symposium",
+      "location": "Braga, Portugal"
+    },
+    {
+      "id": "oral-2023-cinbio",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Enhanced specificity of CTC identification using a double exclusion biomarker assay",
+      "date": "July 20, 2023",
+      "event": "VI Annual Meeting CINBIO",
+      "location": "Vigo, Spain"
+    },
+    {
+      "id": "oral-2023-ciencia-todos",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Do Cancro à Mestástase: Uma Viagem com Turbulência",
+      "date": "May 26, 2023",
+      "event": "II Encontro 'Ciência para Todos' Antena Minho-INL",
+      "location": "Braga, Portugal"
+    },
+    {
+      "id": "oral-2022-fica",
+      "authors": "Adriana Carneiro, Maria Madalena Silva, Paulina Piairo, Lorena Diéguez",
+      "title": "FIC.A — Festival Internacional de Ciência",
+      "date": "October 13, 2022",
+      "event": "FIC.A — Festival Internacional de Ciência",
+      "location": "Oeiras, Portugal"
+    },
+    {
+      "id": "oral-2022-pubhd",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Perseguir o cancro com nanochips",
+      "date": "September 28, 2022",
+      "event": "PubhD UMinho",
+      "location": "Braga, Portugal"
+    },
+    {
+      "id": "oral-2022-enjoi-a",
+      "authors": "Adriana Carneiro, Paulina Piairo, Alicia Abalo, Carolina Herrero, Beatriz Oliveira, Luís Lima, Lorena Alconada, Laura Muinelo-Romay, Lorena Diéguez",
+      "title": "Optimização de imunocitoquímica on-chip para caracterização de Células Tumorais Circulantes em cancro de mama, colorrectal e pulmão",
+      "date": "September 24, 2022",
+      "event": "4º Encontro Nacional de Jovens Investigadores em Oncologia",
+      "location": "Porto, Portugal"
+    },
+    {
+      "id": "oral-2022-enjoi-b",
+      "authors": "Adriana Carneiro, Paulina Piairo, Alicia Abalo, Carolina Herrero, Beatriz Oliveira, Luís Lima, Lorena Alconada, Laura Muinelo-Romay, Lorena Diéguez",
+      "title": "Optimização de imunocitoquímica on-chip para caracterização de Células Tumorais Circulantes em cancro de mama, colorrectal e pulmão",
+      "date": "September 24, 2022",
+      "event": "4º Encontro Nacional de Jovens Investigadores em Oncologia",
+      "location": "Porto, Portugal"
+    },
+    {
+      "id": "oral-2022-portasap",
+      "authors": "Adriana Carneiro, Paulina Piairo, Alexandra Teixeira, Dylan Ferreira, Sofia Cotton, Carolina Rodrigues, Alexandre Chícharo, Sara Abalde-Cela, Luís Lima, Lorena Diéguez",
+      "title": "Label-free Microfluidic-based Isolation of Circulating Tumour Cells from Gastrointestinal Cancer Samples",
+      "date": "February 2022",
+      "event": "PortASAP Final Meeting (online)",
+      "location": "Tallinn, Estonia"
+    },
+    {
+      "id": "oral-2021-enjoi",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Otimização de um Dispositivo de Microfuídica para o Isolamento e Enumeração de Células Tumorais Circulantes em Cancro Gastrointestinal",
+      "date": "September 24, 2021",
+      "event": "3º Encontro Nacional de Jovens Investigadores em Oncologia",
+      "location": "Porto, Portugal"
+    },
+    {
+      "id": "oral-2020-enjoi",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Otimização de um Dispositivo de Microfuídica para o Isolamento e Enumeração de Células Tumorais Circulantes em Cancro Colorretal",
+      "date": "September 24, 2020",
+      "event": "2º Encontro Nacional de Jovens Investigadores em Oncologia",
+      "location": "Porto, Portugal"
+    }
+  ],
+  "poster": [
+    {
+      "id": "poster-2026-biopsia-a",
+      "authors": "Paulina Piairo, Adriana Carneiro, Daniela Santos, Mariana Eiras, Lúcio Lara Santos, Luis Lima, Lorena Diéguez",
+      "title": "Viable CTC Isolation and Retrieval from a Label-free Device for Functional Downstream Analysis in Colorectal Cancer",
+      "date": "January 2026",
+      "event": "XI Simposio Biopsia Liquida",
+      "location": "Santiago de Compostela, Spain"
+    },
+    {
+      "id": "poster-2026-biopsia-b",
+      "authors": "Sandra Carvalho, Liliana Pires, Adriana Carneiro, Paulina Piairo, Joana Fraga, Maria Silva, Ariadna Mato, Maja Molan, Matej Horvat, Jesús García Mata, Sara Abalde, Mercedes Salgado Fernández, Lorena Diéguez",
+      "title": "Longitudinal Analysis of Circulating Tumour Cells Predicts Progression-free Survival in Colorectal Cancer Survivors",
+      "date": "January 2026",
+      "event": "XI Simposio Biopsia Liquida",
+      "location": "Santiago de Compostela, Spain"
+    },
+    {
+      "id": "poster-2025-biopsia-a",
+      "authors": "Adriana Carneiro, Paulina Piairo, Tamagno Pesqueira, Rodrigo Mariño, Luis Lima, Lorena Diéguez",
+      "title": "3D Culture Model for CTC Clusters: A Small Step Towards Cancer Progression and Metastasis",
+      "date": "January 2025",
+      "event": "X Simposio Biopsia Liquida",
+      "location": "Santiago de Compostela, Spain"
+    },
+    {
+      "id": "poster-2025-biopsia-b",
+      "authors": "Paulina Piairo, Adriana Carneiro, Daniela Santos, Mariana Eiras, Lúcio Lara Santos, Luis Lima, Lorena Diéguez",
+      "title": "Translational Study on Gastrointestinal Cancer (GI): EMT Status of Circulating Tumour Cells (CTCs)",
+      "date": "January 2025",
+      "event": "X Simposio Biopsia Liquida",
+      "location": "Santiago de Compostela, Spain"
+    },
+    {
+      "id": "poster-2024-iberos",
+      "authors": "Adriana Carneiro, Paulina Piairo, Tamagno Pesqueira, Rodrigo Mariño, Luis Lima, Lorena Diéguez",
+      "title": "3D Culture Model for CTC Clusters: Understanding the crosstalk between cancer cells and immune cells",
+      "date": "November 2024",
+      "event": "IBEROS+",
+      "location": "Braga, Portugal"
+    },
+    {
+      "id": "poster-2024-ipo-young",
+      "authors": "Adriana Carneiro, Paulina Piairo, Daniela Santos, Mariana Eiras, Rodrigo Mariño, Lúcio Lara Santos, Lorena Diéguez, Luis Lima",
+      "title": "Isolation and Characterization of Circulating Tumour Cells and Cluster in Gastrointestinal Cancer: Towards Non-Invasive Biomarkers for Prognosis",
+      "date": "November 2024",
+      "event": "2nd Young Researchers Day IPO-Porto",
+      "location": "Porto, Portugal"
+    },
+    {
+      "id": "poster-2024-cinbio",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luis Lima, Lorena Diéguez",
+      "title": "CTC Clusters: Understanding the crosstalk between cancer cells and immune cells",
+      "date": "July 2024",
+      "event": "VII Annual Meeting CINBIO",
+      "location": "Vigo, Spain"
+    },
+    {
+      "id": "poster-2023-ipo-young",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Detection and validation of Circulating Tumour Cells in Gastrointestinal Malignancies",
+      "date": "November 2023",
+      "event": "1st Young Researchers Day IPO-Porto",
+      "location": "Porto, Portugal"
+    },
+    {
+      "id": "poster-2023-actc",
+      "authors": "Paulina Piairo, Adriana Carneiro, Luis Lima, Lorena Diéguez",
+      "title": "Highly Specific CTC Detection Assay: Double-Exclusion Approach",
+      "date": "September 2023",
+      "event": "6th Advances in Circulating Tumor Cells",
+      "location": "Skiathos, Greece"
+    },
+    {
+      "id": "poster-2023-ismnrc",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Enhancing CTC Detection and Phenotyping — A High Specificity Double Exclusion Assay",
+      "date": "May 2023",
+      "event": "13th International Symposium on Minimal Residual Cancer",
+      "location": "Hamburg, Germany"
+    },
+    {
+      "id": "poster-2023-biopsia",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "CTC identification: an overlook towards CTC detection and phenotyping methodologies",
+      "date": "January 2023",
+      "event": "VIII Simposio Biopsia Liquida",
+      "location": "Santiago de Compostela, Spain"
+    },
+    {
+      "id": "poster-2022-cinbio",
+      "authors": "Adriana Carneiro, Paulina Piairo, Alicia Abalo, Carolina Herrero, Beatriz Oliveira, Luís Lima, Lorena Alconada, Laura Muinelo-Romay, Lorena Diéguez",
+      "title": "Tailoring Microfluidic Immunoassays for Detection and Characterization of Circulating Tumour Cells in Breast, Colorectal and Lung Cancer",
+      "date": "July 2022",
+      "event": "V Annual Meeting CINBIO",
+      "location": "Vigo, Spain"
+    },
+    {
+      "id": "poster-2022-biopsia",
+      "authors": "Adriana Carneiro, Paulina Piairo, Alexandra Teixeira, Dylan Ferreira, Sofia Cotton, Carolina Rodrigues, Alexandre Chícharo, Sara Abalde-Cela, Luís Lima, Lorena Diéguez",
+      "title": "Microfluidic-based Isolation of Circulating Tumour Cells in Gastrointestinal Cancers",
+      "date": "January 2022",
+      "event": "VII Simposio Biopsia Líquida",
+      "location": "Santiago de Compostela, Spain"
+    },
+    {
+      "id": "poster-2021-euronanoforum",
+      "authors": "Adriana Carneiro, Paulina Piairo, Alexandra Teixeira, Alexandre Chícharo, Sara Abalde-Cela, Luís Lima, Lorena Diéguez",
+      "title": "Microfluidic-based Isolation of Gastrointestinal Circulating Tumour Cells",
+      "date": "May 2021",
+      "event": "EuroNanoForum Conference",
+      "location": "Braga, Portugal"
+    },
+    {
+      "id": "poster-2020-cancer-bio",
+      "authors": "Adriana Carneiro, Paulina Piairo, Luís Lima, Lorena Diéguez",
+      "title": "Optimization of a Microfluidic Device for the Isolation and Enumeration of Circulating Tumour Cells in Colorectal Cancer",
+      "date": "September 2020",
+      "event": "Cancer Biology: From Basic to Translational Research Conference (online)",
+      "location": "Porto, Portugal"
+    }
+  ]
+}

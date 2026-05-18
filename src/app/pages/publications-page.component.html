@@ -38,5 +38,65 @@
         </li>
       }
     </ol>
+
+    <section class="comms" aria-labelledby="comms-title">
+      <header class="comms__header">
+        <h2 id="comms-title">Comunicações</h2>
+      </header>
+
+      <div class="scribble-divider comms__divider" aria-hidden="true"></div>
+
+      <div class="comms__groups">
+        <div class="comms__group">
+          <h3 class="comms__group-title">
+            <span class="comms__group-badge comms__group-badge--oral">Oral</span>
+            Comunicações Orais
+          </h3>
+          <ol class="comm-list" reversed>
+            @for (comm of communications.oral; track comm.id) {
+              <li class="comm-item">
+                <div class="comm-item__line" aria-hidden="true"></div>
+                <div class="comm-item__body">
+                  <p class="comm-item__title">{{ comm.title }}</p>
+                  <p class="comm-item__authors">{{ comm.authors }}</p>
+                  <p class="comm-item__venue">
+                    <span class="comm-item__date">{{ comm.date }}</span>
+                    <span class="comm-item__sep" aria-hidden="true">·</span>
+                    <span>{{ comm.event }}</span>
+                    <span class="comm-item__sep" aria-hidden="true">·</span>
+                    <span class="comm-item__location">{{ comm.location }}</span>
+                  </p>
+                </div>
+              </li>
+            }
+          </ol>
+        </div>
+
+        <div class="comms__group">
+          <h3 class="comms__group-title">
+            <span class="comms__group-badge comms__group-badge--poster">Poster</span>
+            Comunicações em Poster
+          </h3>
+          <ol class="comm-list" reversed>
+            @for (comm of communications.poster; track comm.id) {
+              <li class="comm-item">
+                <div class="comm-item__line" aria-hidden="true"></div>
+                <div class="comm-item__body">
+                  <p class="comm-item__title">{{ comm.title }}</p>
+                  <p class="comm-item__authors">{{ comm.authors }}</p>
+                  <p class="comm-item__venue">
+                    <span class="comm-item__date">{{ comm.date }}</span>
+                    <span class="comm-item__sep" aria-hidden="true">·</span>
+                    <span>{{ comm.event }}</span>
+                    <span class="comm-item__sep" aria-hidden="true">·</span>
+                    <span class="comm-item__location">{{ comm.location }}</span>
+                  </p>
+                </div>
+              </li>
+            }
+          </ol>
+        </div>
+      </div>
+    </section>
   </div>
 </article>
