@@ -211,6 +211,8 @@ body {
 
 app-home-page {
   display: block;
+  max-width: 100vw;
+  overflow-x: clip;
 }
 
 app-home-page > * {
