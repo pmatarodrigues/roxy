@@ -2,6 +2,7 @@
   display: block;
   background: var(--accent-coral-light);
   padding: var(--space-20) var(--space-6);
+  overflow-x: clip;
 }
 
 .blog {
