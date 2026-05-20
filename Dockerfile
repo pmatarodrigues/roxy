@@ -8,7 +8,7 @@ WORKDIR /app
 
 RUN npm install -g pnpm
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 RUN --mount=type=cache,target=/root/.local/share/pnpm/store pnpm install
 
 COPY . .
