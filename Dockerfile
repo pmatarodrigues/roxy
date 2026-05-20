@@ -6,11 +6,13 @@ ARG NGINX_VERSION=alpine3.22
 FROM node:${NODE_VERSION} AS builder
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
-RUN --mount=type=cache,target=/root/.npm npm ci
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+COPY package.json pnpm-lock.yaml ./
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store pnpm install --frozen-lockfile
 
 COPY . .
-RUN npm run build -- --configuration production
+RUN pnpm run build -- --configuration production
 
 FROM nginxinc/nginx-unprivileged:${NGINX_VERSION} AS runner
 COPY nginx.conf /etc/nginx/nginx.conf

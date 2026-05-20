@@ -7,10 +7,12 @@ WORKDIR /app
 
 ENV NODE_ENV=development
 
-COPY package.json package-lock.json* ./
-RUN --mount=type=cache,target=/root/.npm npm install
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+COPY package.json pnpm-lock.yaml ./
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store pnpm install --frozen-lockfile
 
 COPY . .
 
 EXPOSE 4200
-CMD ["npm", "start", "--", "--host=0.0.0.0", "--poll=2000"]
+CMD ["pnpm", "start", "--", "--host=0.0.0.0", "--poll=2000"]
