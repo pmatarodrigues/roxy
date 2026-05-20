@@ -1,0 +1,70 @@
+nav:
+  intro: Introduction
+  blog: Writing
+  interests: Interests
+  media: Media
+  journey: Journey
+  contact: Contact
+
+hero:
+  title: Science With Its Own Voice
+  lede: Adriana Carneiro
+  summary: >
+    An enthusiastic biologist with a PhD in oncology who believes that science should
+    be fun and accessible to the whole community. Welcome to my special place where
+    science is communicated clearly and joyfully, without ever losing the rigour it demands.
+  cta_contact: Available to Talk
+  cta_publications: Scientific Publications
+  scroll_hint: Scroll to read texts, explore interests and discover projects.
+  month_pick: Month Pick
+  month_rec: One text I recommend if you are new here
+
+blog:
+  eyebrow: Writing Desk
+  title: Voices of Science
+  intro: Texts on oncology, communication, hobbies and small observations from life in science.
+  read_more: Read post
+  only_in_en: Only available in English
+  only_in_pt: Only available in Portuguese
+  empty: No posts published yet.
+  back: "← Back to portfolio"
+  not_found: Post not found
+  unavailable: This article is unavailable right now.
+
+videos:
+  title: 3 Minutes of Science
+  desc: Videos and Presentations
+  filter_language: Language
+  filter_topic: Topic
+  filter_search: Search
+  filter_search_placeholder: "biomarkers, evidence..."
+  empty: No media items match current filters.
+
+side_projects:
+  eyebrow: "Projects & hobbies · beyond benchwork"
+  title: Postcards for Scientists
+  gallery_label: Gallery of postcards for scientists
+
+contact:
+  title: Available to Talk
+  summary: "Science, writing, ideas, collaborations."
+  cta: Get in Touch
+  linkedin: LinkedIn
+
+publications:
+  eyebrow: Science · Research
+  title: Scientific Publications
+  back: "← Home"
+  comms_title: Communications
+  oral_label: Oral Communications
+  poster_label: Poster Communications
+  type_article: Article
+  type_book_chapter: Book Chapter
+  type_opinion: Opinion
+
+footer:
+  top: "↑ Top"
+
+common:
+  lang_en: EN
+  lang_pt: PT

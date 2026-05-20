@@ -1,0 +1,70 @@
+nav:
+  intro: Introdução
+  blog: Escrita
+  interests: Interesses
+  media: Media
+  journey: Percurso
+  contact: Contacto
+
+hero:
+  title: Ciência Com Voz Própria
+  lede: Adriana Carneiro
+  summary: >
+    Uma bióloga entusiasmada com doutoramento em oncologia que acredita que a ciência
+    deve ser divertida e acessível a toda a comunidade. Bem-vindo ao meu local especial
+    onde a ciência é comunicada de forma clara e divertida, sem nunca perder o rigor que lhe é exigida.
+  cta_contact: Disponível Para Conversar
+  cta_publications: Publicações Científicas
+  scroll_hint: Scroll para ler textos, explorar interesses e descobrir projetos.
+  month_pick: Sugestão do Mês
+  month_rec: Um texto que recomendo se chegaste aqui pela primeira vez
+
+blog:
+  eyebrow: Mesa de Escrita
+  title: Vozes da Ciência
+  intro: Textos sobre oncologia, comunicação, hobbies e pequenas observações da vida em ciência.
+  read_more: Ler artigo
+  only_in_en: Apenas disponível em inglês
+  only_in_pt: Apenas disponível em português
+  empty: Ainda sem posts publicados.
+  back: "← Voltar ao portfólio"
+  not_found: Post não encontrado
+  unavailable: Este artigo não está disponível de momento.
+
+videos:
+  title: 3 Minutos de Ciência
+  desc: Vídeos e Apresentações
+  filter_language: Idioma
+  filter_topic: Tema
+  filter_search: Pesquisar
+  filter_search_placeholder: "biomarcadores, evidências..."
+  empty: Nenhum item corresponde aos filtros.
+
+side_projects:
+  eyebrow: "Projetos & hobbies · beyond benchwork"
+  title: Postais Para Cientistas
+  gallery_label: Galeria de postais para cientistas
+
+contact:
+  title: Disponível para Conversar
+  summary: "Ciência, escrita, ideias e colaborações."
+  cta: Entrar em Contacto
+  linkedin: LinkedIn
+
+publications:
+  eyebrow: Ciência · Research
+  title: Publicações Científicas
+  back: "← Início"
+  comms_title: Comunicações
+  oral_label: Comunicações Orais
+  poster_label: Comunicações em Poster
+  type_article: Artigo
+  type_book_chapter: Capítulo de livro
+  type_opinion: Opinião
+
+footer:
+  top: "↑ Topo"
+
+common:
+  lang_en: EN
+  lang_pt: PT
