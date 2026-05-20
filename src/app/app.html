@@ -2,7 +2,7 @@
 
 <header class="site-header" id="top">
   <div class="site-header__inner">
-    <a href="/#top" class="site-header__brand">
+    <a [href]="'/' + lang() + '/#top'" class="site-header__brand">
       <span class="site-header__name">Adriana Carneiro</span>
       <span class="site-header__tag">PhD</span>
     </a>
@@ -11,11 +11,16 @@
       <ul class="site-nav__list">
         @for (link of sectionLinks; track link.id) {
           <li>
-            <a [href]="'/#' + link.id" class="site-nav__anchor">{{ link.label }}</a>
+            <a [href]="'/' + lang() + '/#' + link.id" class="site-nav__anchor">{{ link.key | translate }}</a>
           </li>
         }
       </ul>
     </nav>
+
+    <div class="lang-switcher" aria-label="Language">
+      <a [routerLink]="langPath('pt')" [class.lang-switcher__active]="lang() === 'pt'">{{ 'common.lang_pt' | translate }}</a>
+      <a [routerLink]="langPath('en')" [class.lang-switcher__active]="lang() === 'en'">{{ 'common.lang_en' | translate }}</a>
+    </div>
   </div>
 </header>
 
@@ -25,7 +30,7 @@
 
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <p>© {{ currentYear }} Adriana Carneiro · Portugal</p>
-    <a href="/#top" class="site-footer__top">↑ Top</a>
+    <p>© {{ currentYear }} Adriana Carneiro</p>
+    <a [href]="'/' + lang() + '/#top'" class="site-footer__top">{{ 'footer.top' | translate }}</a>
   </div>
 </footer>

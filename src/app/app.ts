@@ -1,32 +1,41 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
+
+import { I18nService } from './features/i18n/i18n.service';
+import { TranslatePipe } from './features/i18n/translate.pipe';
 
 interface SectionLink {
   readonly id: string;
-  readonly label: string;
-  readonly note: string;
+  readonly key: string;
 }
 
 const SECTION_LINKS: readonly SectionLink[] = [
-  { id: 'hero', label: 'Introduction', note: 'Who I am' },
-  { id: 'blog', label: 'Writing', note: 'Science • life • curiosity' },
-  {
-    id: 'side-projects',
-    label: 'Interests',
-    note: 'Projects • hobbies • creative practice',
-  },
-  { id: 'videos', label: 'Media', note: 'Talks • Visual explainers' },
-  { id: 'journey', label: 'Journey', note: 'Learning path over time' },
-  { id: 'contact', label: 'Contact', note: 'Open conversations' },
+  { id: 'hero', key: 'nav.intro' },
+  { id: 'blog', key: 'nav.blog' },
+  { id: 'side-projects', key: 'nav.interests' },
+  { id: 'videos', key: 'nav.media' },
+  { id: 'contact', key: 'nav.contact' },
 ];
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, TranslatePipe],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
+  private readonly router = inject(Router);
+  protected readonly i18n = inject(I18nService);
   protected readonly sectionLinks = SECTION_LINKS;
   protected readonly currentYear = new Date().getFullYear();
+
+  protected lang(): 'en' | 'pt' {
+    return this.i18n.lang();
+  }
+
+  protected langPath(targetLang: 'en' | 'pt'): string {
+    const parts = this.router.url.split('/').filter(Boolean);
+    parts[0] = targetLang;
+    return '/' + parts.join('/');
+  }
 }
