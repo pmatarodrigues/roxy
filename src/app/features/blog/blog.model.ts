@@ -4,6 +4,7 @@ export interface BlogPostMeta {
   readonly date: string;
   readonly excerpt: string;
   readonly cover?: string;
+  readonly hero?: string;
   readonly languages: readonly ('en' | 'pt')[];
   readonly baseUrl?: string;
 }

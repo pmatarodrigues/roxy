@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 
@@ -19,6 +19,7 @@ interface BlogPostViewModel extends BlogPost {
   imports: [AsyncPipe, RouterLink, TranslatePipe],
   templateUrl: './blog-post-page.component.html',
   styleUrl: './blog-post-page.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
 export class BlogPostPageComponent {
   private readonly route = inject(ActivatedRoute);
@@ -39,14 +40,22 @@ export class BlogPostPageComponent {
         return null;
       }
 
-      return {
-        ...post,
-        html: this.markdownService.render(post.markdown, post.baseUrl),
-      } as BlogPostViewModel;
+      const rendered = this.markdownService.render(post.markdown, post.baseUrl);
+      const html = this.injectSignature(rendered, post.date);
+
+      return { ...post, html } as BlogPostViewModel;
     }),
   );
 
   protected formatDate(date: string): string {
     return this.dateFormatter.format(new Date(date));
+  }
+
+  private injectSignature(html: string, date: string): string {
+    const sig = `<div class="post-signature"><p class="post-signature__name">Adriana Carneiro</p><p class="post-signature__date">${this.formatDate(date)}</p></div>`;
+    const refMarker = '<h2 class="post-references"';
+    return html.includes(refMarker)
+      ? html.replace(refMarker, sig + refMarker)
+      : html + sig;
   }
 }

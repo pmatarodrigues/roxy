@@ -6,6 +6,7 @@
   background: var(--background);
   min-block-size: calc(100dvh - 10rem);
   padding: var(--space-16) var(--space-6) var(--space-24);
+  overflow-x: clip;
 }
 
 .blog-post__inner {
@@ -30,6 +31,7 @@
 .blog-post__header {
   margin-top: var(--space-8);
   max-width: var(--reading-max);
+  margin-inline: auto;
 }
 
 .blog-post__date {
@@ -40,7 +42,7 @@
   letter-spacing: 0.04em;
 }
 
-h1 {
+.blog-post__header h1 {
   margin-top: var(--space-3);
 }
 
@@ -52,17 +54,89 @@ h1 {
   max-width: 64ch;
 }
 
+/* ── Content area ───────────────────────────────────────────── */
+
 .blog-post__content {
   margin-top: var(--space-10);
   max-width: 68ch;
+  margin-inline: auto;
   line-height: 1.8;
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
-.blog-post__content :where(h2, h3, h4) {
+/* Drop cap on opening paragraph */
+.blog-post__content > p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.6em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 0.82;
+  margin-right: 0.08em;
+  margin-bottom: -0.06em;
+  color: var(--accent-coral);
+}
+
+/* ── Headings ───────────────────────────────────────────────── */
+
+.blog-post__content h2 {
+  margin-top: var(--space-10);
+  position: relative;
+  padding-left: 2.4rem;
+  text-decoration: underline wavy var(--accent-coral);
+  text-underline-offset: 0.35em;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+}
+
+/* Hand-drawn curvy arrow → coral (default) */
+.blog-post__content h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  width: 1.9rem;
+  height: 1.2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 44 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 20 C10 6 22 6 38 14' stroke='%23d77159' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M32 10 L38 14 L32 18' stroke='%23d77159' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Arrow variant 2 → teal, slight tilt */
+.blog-post__content h2:nth-of-type(3n + 2) {
+  text-decoration-color: var(--primary);
+}
+
+.blog-post__content h2:nth-of-type(3n + 2)::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 44 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 16 Q16 4 36 14' stroke='%23289487' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M30 10 L36 14 L30 18' stroke='%23289487' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  transform: rotate(5deg);
+  transform-origin: left center;
+}
+
+/* Arrow variant 3 → amber, s-curve */
+.blog-post__content h2:nth-of-type(3n) {
+  text-decoration-color: var(--accent-amber);
+}
+
+.blog-post__content h2:nth-of-type(3n)::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 44 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 14 Q14 4 26 10 Q34 14 38 20' stroke='%23c29e25' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M32 16 L38 20 L31 21' stroke='%23c29e25' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  transform: rotate(-4deg);
+  transform-origin: left center;
+}
+
+.blog-post__content :where(h3) {
   margin-top: var(--space-8);
+  color: var(--primary);
 }
 
-.blog-post__content :where(p, ul, ol, blockquote, pre) {
+.blog-post__content :where(h4) {
+  margin-top: var(--space-6);
+}
+
+/* ── Body elements ──────────────────────────────────────────── */
+
+.blog-post__content :where(p, ul, ol, pre) {
   margin-top: var(--space-4);
 }
 
@@ -70,12 +144,90 @@ h1 {
   padding-inline-start: var(--space-6);
 }
 
+/* ── Blockquotes ────────────────────────────────────────────── */
+
 .blog-post__content :where(blockquote) {
-  margin-inline: 0;
-  padding-left: var(--space-4);
-  border-left: 3px solid var(--primary);
-  color: var(--muted-foreground);
+  position: relative;
+  margin: var(--space-8) 0;
+  padding: var(--space-6) var(--space-6) var(--space-5);
+  background: var(--accent-amber-light);
+  border-left: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--surface-foreground);
+  box-shadow: var(--shadow-soft-md);
 }
+
+.blog-post__content :where(blockquote)::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.1rem;
+  left: var(--space-4);
+  font-size: 4.5rem;
+  font-family: var(--font-display);
+  font-style: normal;
+  color: var(--accent-coral);
+  line-height: 1;
+  opacity: 0.65;
+}
+
+.blog-post__content :where(blockquote p) {
+  margin-top: 0;
+}
+
+/* Alternate blockquote palette */
+.blog-post__content blockquote:nth-of-type(3n + 2) {
+  background: var(--accent-coral-light);
+}
+
+.blog-post__content blockquote:nth-of-type(3n + 2)::before {
+  color: var(--primary);
+}
+
+.blog-post__content blockquote:nth-of-type(3n) {
+  background: var(--accent-sage-light);
+}
+
+.blog-post__content blockquote:nth-of-type(3n)::before {
+  color: var(--accent-amber);
+}
+
+/* ── ++marker++ — amber highlighter brush stroke ────────────── */
+
+.blog-post__content :where(u) {
+  text-decoration: none;
+  background: linear-gradient(
+    104deg,
+    oklch(0.9 0.14 75 / 0) 0.9%,
+    oklch(0.9 0.12 75 / 0.52) 2.4%,
+    oklch(0.88 0.1 75 / 0.38) 85%,
+    oklch(0.9 0.08 75 / 0) 93%
+  );
+  border-radius: 0.8em 0 0.8em 0;
+  padding: 0.05em 0.25em;
+}
+
+/* ==underline== — modern colorful gradient underline ────────── */
+
+.blog-post__content :where(.post-underline) {
+  text-decoration: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--accent-coral),
+    var(--accent-amber),
+    var(--accent-sage),
+    var(--accent-lavender)
+  );
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 2.5px;
+  padding-bottom: 3px;
+}
+
+/* ── Code ───────────────────────────────────────────────────── */
 
 .blog-post__content :where(code) {
   font-family: var(--font-mono);
@@ -91,10 +243,30 @@ h1 {
   overflow-x: auto;
 }
 
+/* ── Images and figures ─────────────────────────────────────── */
+
 .blog-post__content :where(img) {
   max-inline-size: 100%;
   block-size: auto;
   border-radius: var(--radius-md);
+}
+
+.blog-post__content :where(figure) {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.blog-post__content :where(figcaption) {
+  overflow: visible;
+  padding: var(--space-2) var(--space-2) 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  color: var(--muted-foreground);
+  letter-spacing: 0.04em;
+  text-align: center;
+  font-style: italic;
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* ── Post image alignment ───────────────────────────────────── */
@@ -107,6 +279,7 @@ h1 {
   text-align: center;
 
   img { max-inline-size: 100%; }
+  figcaption { text-align: center; }
 }
 
 .blog-post__content :where(.post-img--left) {
@@ -115,6 +288,7 @@ h1 {
   max-inline-size: 45%;
 
   img { inline-size: 100%; }
+  figcaption { text-align: left; }
 }
 
 .blog-post__content :where(.post-img--right) {
@@ -123,6 +297,110 @@ h1 {
   max-inline-size: 45%;
 
   img { inline-size: 100%; }
+  figcaption { text-align: right; }
+}
+
+/* ── Wave divider (rendered from ---) ───────────────────────── */
+
+.post-divider {
+  margin: var(--space-10) auto;
+  max-width: 10rem;
+  color: var(--accent-coral);
+  opacity: 0.55;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ── Signature ──────────────────────────────────────────────── */
+
+.post-signature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+  margin-top: var(--space-10);
+}
+
+.post-signature__name {
+  margin: 0;
+  font-family: 'Caveat', cursive;
+  font-size: var(--step-1);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent-coral);
+}
+
+.post-signature__date {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  color: var(--muted-foreground);
+  letter-spacing: 0.06em;
+}
+
+/* ── References section ─────────────────────────────────────── */
+/* Triggered by ## References heading in markdown */
+
+.blog-post__content h2.post-references {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  padding-left: 0;
+  border-top: 2px dashed var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  text-decoration: none;
+}
+
+.blog-post__content h2.post-references::before {
+  display: none;
+}
+
+.blog-post__content h2.post-references ~ p,
+.blog-post__content h2.post-references ~ ol,
+.blog-post__content h2.post-references ~ ul {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  color: var(--muted-foreground);
+  line-height: 1.65;
+  text-align: left;
+  hyphens: none;
+  letter-spacing: 0.01em;
+}
+
+.blog-post__content h2.post-references ~ ol {
+  padding-inline-start: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.blog-post__content h2.post-references ~ ol a,
+.blog-post__content h2.post-references ~ ul a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+}
+
+/* ── Hero / cover images ────────────────────────────────────── */
+
+.blog-post__hero {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: var(--reading-max);
+  block-size: auto;
+  border-radius: var(--radius-md);
+  margin-top: var(--space-6);
+  object-fit: cover;
 }
 
 .blog-post__cover {
@@ -135,11 +413,25 @@ h1 {
   object-fit: cover;
 }
 
+/* ── Responsive ─────────────────────────────────────────────── */
+
 @media (max-width: 640px) {
   .blog-post__content :where(.post-img--left, .post-img--right) {
     float: none;
     max-inline-size: 100%;
     margin: var(--space-4) 0;
+  }
+
+  .blog-post__content > p:first-of-type::first-letter {
+    font-size: 2.8em;
+  }
+
+  .blog-post__content h2 {
+    padding-left: 0;
+  }
+
+  .blog-post__content h2::before {
+    display: none;
   }
 }
 
@@ -147,10 +439,20 @@ h1 {
   .blog-post {
     padding: var(--space-10) var(--space-4) var(--space-16);
   }
+
+  .blog-post__content :where(blockquote) {
+    font-size: var(--step-0);
+  }
 }
 
 @media (max-width: 480px) {
   .blog-post {
     padding: var(--space-8) var(--space-3) var(--space-12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-post__content :where(blockquote) {
+    transition: none;
   }
 }

@@ -6,15 +6,6 @@
     <p class="blog__intro">
       {{ 'blog.intro' | translate }}
     </p>
-    <!--<div
-      class="blog__newsletter scrapbook-paper scrapbook-tape scrapbook-paperclip scrapbook-paper--tilt-right"
-    >
-      <p class="blog__newsletter-title">Get monthly notes · receber notas mensais</p>
-      <p class="blog__newsletter-copy">
-        One short email with new writing + one reflection from the month.
-      </p>
-      <a class="blog__newsletter-link" [href]="newsletterHref">Subscribe by email · subscrever</a>
-    </div>-->
   </header>
 
   @if (latestPosts(); as posts) {
@@ -36,24 +27,30 @@
             [class.blog-card--postcard]="index === 1"
             [class.blog-card--notebook]="index > 1"
           >
-            @if (post.cover) {
-              <img class="blog-card__cover" [src]="post.cover" [alt]="post.title" loading="lazy" decoding="async" />
-            }
-            @if (!post.availableInCurrentLang) {
-              <p class="blog-card__lang-badge">{{ unavailableBadgeKey(post.languages) | translate }}</p>
-            }
-            <p class="blog-card__tag">{{ getEditorialTag(index) }}</p>
-            <p class="blog-card__date">{{ formatDate(post.date) }}</p>
-            <h3>
-              <a [routerLink]="['/', i18n.lang(), 'blog', post.slug]">{{ post.title }}</a>
-            </h3>
-            <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+            <!-- Hero image / placeholder -->
+            <div class="blog-card__visual">
+              @if (post.hero) {
+                <img class="blog-card__hero-img" [src]="post.hero" [alt]="post.title" loading="lazy" decoding="async" />
+              }
+              @if (!post.availableInCurrentLang) {
+                <span class="blog-card__lang-badge">{{ unavailableBadgeKey(post.languages) | translate }}</span>
+              }
+            </div>
+
+            <div class="blog-card__body">
+              <p class="blog-card__date">{{ formatDate(post.date) }}</p>
+              <h3>
+                <a [routerLink]="['/', i18n.lang(), 'blog', post.slug]">{{ post.title }}</a>
+              </h3>
+              <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+            </div>
+
             <a
-              class="blog-card__link"
+              class="blog-card__cta"
               [routerLink]="['/', i18n.lang(), 'blog', post.slug]"
               [attr.aria-label]="('blog.read_more' | translate) + ': ' + post.title"
             >
-              {{ 'blog.read_more' | translate }}
+              {{ 'blog.read_more' | translate }} →
             </a>
           </article>
         }

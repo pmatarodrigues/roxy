@@ -72,7 +72,9 @@ for (const lang of LANGS) {
 
     const slug = entry;
     const title = meta.title ?? firstH1(body) ?? slug;
-    const cover = meta.cover ? `/content/blog/${lang}/${slug}/${meta.cover}` : undefined;
+    const base = `/content/blog/${lang}/${slug}`;
+    const cover = meta.cover ? `${base}/${meta.cover}` : undefined;
+    const hero = meta.hero ? `${base}/${meta.hero}` : undefined;
 
     if (!postsBySlug[slug]) postsBySlug[slug] = { slug, langs: [] };
     postsBySlug[slug].langs.push(lang);
@@ -82,6 +84,7 @@ for (const lang of LANGS) {
       postsBySlug[slug].date = meta.date ? String(meta.date) : '';
       postsBySlug[slug].excerpt = meta.excerpt ?? '';
       if (cover) postsBySlug[slug].cover = cover;
+      if (hero) postsBySlug[slug].hero = hero;
     }
   }
 }
@@ -89,12 +92,13 @@ for (const lang of LANGS) {
 const posts = Object.values(postsBySlug)
   .filter((p) => p.date)
   .sort((a, b) => new Date(b.date) - new Date(a.date))
-  .map(({ slug, title, date, excerpt, cover, langs }) => ({
+  .map(({ slug, title, date, excerpt, cover, hero, langs }) => ({
     slug,
     title,
     date,
     excerpt,
     ...(cover ? { cover } : {}),
+    ...(hero ? { hero } : {}),
     languages: langs,
   }));
 
