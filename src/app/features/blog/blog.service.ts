@@ -41,13 +41,17 @@ export class BlogService {
         if (!postMeta) return of(null);
 
         const fetchLang = postMeta.availableInCurrentLang ? lang : (postMeta.languages[0] ?? 'en');
-        return this.http
-          .get(`/content/blog/${fetchLang}/${postMeta.slug}.md`, { responseType: 'text' })
-          .pipe(
-            map((markdown) => ({ ...postMeta, markdown })),
-            catchError(() => of(null)),
-          );
+        const baseUrl = `/content/blog/${fetchLang}/${postMeta.slug}`;
+        return this.http.get(`${baseUrl}/index.md`, { responseType: 'text' }).pipe(
+          map((raw) => ({ ...postMeta, markdown: stripFrontmatter(raw), baseUrl })),
+          catchError(() => of(null)),
+        );
       }),
     );
   }
+}
+
+function stripFrontmatter(raw: string): string {
+  const match = raw.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/);
+  return match ? raw.slice(match[0].length) : raw;
 }

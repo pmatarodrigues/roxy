@@ -50,3 +50,4 @@ Thumbs.db
 # Generated at build time
 public/assets/postcards/manifest.json
 public/i18n/
+public/content/blog/index.json

@@ -4,6 +4,9 @@
 
     @if (post$ | async; as post) {
       <header class="blog-post__header">
+        @if (post.cover) {
+          <img class="blog-post__cover" [src]="post.cover" [alt]="post.title" loading="eager" decoding="async" />
+        }
         <p class="blog-post__date">{{ formatDate(post.date) }}</p>
         <h1>{{ post.title }}</h1>
         <p class="blog-post__excerpt">{{ post.excerpt }}</p>

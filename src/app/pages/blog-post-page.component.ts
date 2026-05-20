@@ -41,7 +41,7 @@ export class BlogPostPageComponent {
 
       return {
         ...post,
-        html: this.markdownService.render(post.markdown),
+        html: this.markdownService.render(post.markdown, post.baseUrl),
       } as BlogPostViewModel;
     }),
   );

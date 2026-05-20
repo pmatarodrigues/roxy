@@ -1,6 +1,7 @@
-import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
+import { switchMap } from 'rxjs';
 
 import { BlogService } from '../../features/blog/blog.service';
 import { I18nService } from '../../features/i18n/i18n.service';
@@ -9,7 +10,7 @@ import { TranslatePipe } from '../../features/i18n/translate.pipe';
 @Component({
   selector: 'app-blog-section',
   standalone: true,
-  imports: [AsyncPipe, RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './blog-section.component.html',
   styleUrl: './blog-section.component.scss',
 })
@@ -31,9 +32,12 @@ export class BlogSectionComponent {
   protected readonly newsletterHref =
     'mailto:adriana.carneiro.618@gmail.com?subject=subscribe%20me%20to%20your%20updates';
 
-  protected get latestPosts$() {
-    return this.blogService.getLatestPosts(4, this.i18n.lang());
-  }
+  protected readonly latestPosts = toSignal(
+    toObservable(this.i18n.lang).pipe(
+      switchMap((lang) => this.blogService.getLatestPosts(4, lang)),
+    ),
+    { initialValue: [] },
+  );
 
   protected formatDate(date: string): string {
     return this.dateFormatter.format(new Date(date));

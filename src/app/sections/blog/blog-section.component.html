@@ -17,7 +17,7 @@
     </div>-->
   </header>
 
-  @if (latestPosts$ | async; as posts) {
+  @if (latestPosts(); as posts) {
     @if (posts.length === 0) {
       <p class="blog__empty">{{ 'blog.empty' | translate }}</p>
     } @else {
@@ -36,6 +36,9 @@
             [class.blog-card--postcard]="index === 1"
             [class.blog-card--notebook]="index > 1"
           >
+            @if (post.cover) {
+              <img class="blog-card__cover" [src]="post.cover" [alt]="post.title" loading="lazy" decoding="async" />
+            }
             @if (!post.availableInCurrentLang) {
               <p class="blog-card__lang-badge">{{ unavailableBadgeKey(post.languages) | translate }}</p>
             }

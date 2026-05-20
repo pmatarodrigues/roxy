@@ -5,6 +5,7 @@ export interface BlogPostMeta {
   readonly excerpt: string;
   readonly cover?: string;
   readonly languages: readonly ('en' | 'pt')[];
+  readonly baseUrl?: string;
 }
 
 export interface BlogIndex {
