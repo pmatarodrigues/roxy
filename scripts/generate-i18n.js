@@ -25,6 +25,9 @@ mkdirSync(OUT_DIR, { recursive: true });
 for (const lang of ['en', 'pt']) {
   const raw = readFileSync(join(SRC_DIR, `${lang}.yaml`), 'utf8');
   const parsed = yaml.load(raw);
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    throw new Error(`[generate-i18n] ${lang}.yaml must be a YAML mapping, got: ${typeof parsed}`);
+  }
   const flat = flatten(parsed);
   writeFileSync(join(OUT_DIR, `${lang}.json`), JSON.stringify(flat, null, 2));
   console.log(`[generate-i18n] Wrote public/i18n/${lang}.json (${Object.keys(flat).length} keys)`);
