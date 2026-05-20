@@ -1,10 +1,10 @@
 <section id="blog" aria-labelledby="blog-title" class="blog">
   <header class="blog__header scrapbook-doodle-wave">
-    <p class="blog__eyebrow">Mesa de Escrita</p>
+    <p class="blog__eyebrow">{{ 'blog.eyebrow' | translate }}</p>
 
-    <h2 id="blog-title">Vozes da Ciência</h2>
+    <h2 id="blog-title">{{ 'blog.title' | translate }}</h2>
     <p class="blog__intro">
-      Textos sobre oncologia, comunicação, hobbies e pequenas observações da vida em ciência.
+      {{ 'blog.intro' | translate }}
     </p>
     <!--<div
       class="blog__newsletter scrapbook-paper scrapbook-tape scrapbook-paperclip scrapbook-paper--tilt-right"
@@ -19,13 +19,14 @@
 
   @if (latestPosts$ | async; as posts) {
     @if (posts.length === 0) {
-      <p class="blog__empty">No posts published yet · ainda sem posts publicados.</p>
+      <p class="blog__empty">{{ 'blog.empty' | translate }}</p>
     } @else {
       <div class="blog__grid" role="list" aria-label="Latest blog posts">
         @for (post of posts; track post.slug; let index = $index) {
           <article
             class="blog-card scrapbook-paper"
             role="listitem"
+            [class.blog-card--unavailable]="!post.availableInCurrentLang"
             [class.scrapbook-paper--tilt-left]="isTiltLeft(index)"
             [class.scrapbook-paper--tilt-right]="isTiltRight(index)"
             [class.scrapbook-tape]="index === 0"
@@ -35,19 +36,21 @@
             [class.blog-card--postcard]="index === 1"
             [class.blog-card--notebook]="index > 1"
           >
+            @if (!post.availableInCurrentLang) {
+              <p class="blog-card__lang-badge">{{ unavailableBadgeKey(post.languages) | translate }}</p>
+            }
             <p class="blog-card__tag">{{ getEditorialTag(index) }}</p>
             <p class="blog-card__date">{{ formatDate(post.date) }}</p>
             <h3>
-              <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+              <a [routerLink]="['/', i18n.lang(), 'blog', post.slug]">{{ post.title }}</a>
             </h3>
             <p class="blog-card__excerpt">{{ post.excerpt }}</p>
-            <p class="blog-card__meta">Read time quick · leitura rápida</p>
             <a
               class="blog-card__link"
-              [routerLink]="['/blog', post.slug]"
-              [attr.aria-label]="'Read post: ' + post.title"
+              [routerLink]="['/', i18n.lang(), 'blog', post.slug]"
+              [attr.aria-label]="('blog.read_more' | translate) + ': ' + post.title"
             >
-              Read post → ler artigo
+              {{ 'blog.read_more' | translate }}
             </a>
           </article>
         }

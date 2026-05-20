@@ -3,16 +3,19 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { BlogService } from '../../features/blog/blog.service';
+import { I18nService } from '../../features/i18n/i18n.service';
+import { TranslatePipe } from '../../features/i18n/translate.pipe';
 
 @Component({
   selector: 'app-blog-section',
   standalone: true,
-  imports: [AsyncPipe, RouterLink],
+  imports: [AsyncPipe, RouterLink, TranslatePipe],
   templateUrl: './blog-section.component.html',
   styleUrl: './blog-section.component.scss',
 })
 export class BlogSectionComponent {
   private readonly blogService = inject(BlogService);
+  protected readonly i18n = inject(I18nService);
   private readonly dateFormatter = new Intl.DateTimeFormat('en-GB', {
     day: '2-digit',
     month: 'short',
@@ -28,7 +31,9 @@ export class BlogSectionComponent {
   protected readonly newsletterHref =
     'mailto:adriana.carneiro.618@gmail.com?subject=subscribe%20me%20to%20your%20updates';
 
-  protected readonly latestPosts$ = this.blogService.getLatestPosts(4);
+  protected get latestPosts$() {
+    return this.blogService.getLatestPosts(4, this.i18n.lang());
+  }
 
   protected formatDate(date: string): string {
     return this.dateFormatter.format(new Date(date));
@@ -44,5 +49,9 @@ export class BlogSectionComponent {
 
   protected isTiltRight(index: number): boolean {
     return !this.isTiltLeft(index);
+  }
+
+  protected unavailableBadgeKey(languages: readonly ('en' | 'pt')[]): string {
+    return languages[0] === 'en' ? 'blog.only_in_en' : 'blog.only_in_pt';
   }
 }

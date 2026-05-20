@@ -1,9 +1,9 @@
 <section id="videos" aria-labelledby="videos-title" class="video-gallery">
   <header class="video-gallery__header">
     <!--<p class="video-gallery__eyebrow">Media portfolio / Portfólio de mídia</p>-->
-    <h2 id="videos-title">3 Minutos de Ciência</h2>
+    <h2 id="videos-title">{{ 'videos.title' | translate }}</h2>
     <p class="video-gallery__desc">
-      Vídeos e Apresentações
+      {{ 'videos.desc' | translate }}
     </p>
   </header>
 
@@ -14,7 +14,7 @@
     aria-label="Media filters"
   >
     <fieldset class="video-filters__group" aria-label="Filter by language">
-      <legend>Language / Idioma</legend>
+      <legend>{{ 'videos.filter_language' | translate }}</legend>
       <div class="video-filters__buttons">
         @for (option of languageOptions; track option.value) {
           <button
@@ -30,7 +30,7 @@
     </fieldset>
 
     <label class="video-filters__select">
-      <span>Topic / Tema</span>
+      <span>{{ 'videos.filter_topic' | translate }}</span>
       <select [value]="topicFilter()" (change)="setTopic($any($event.target).value)">
         @for (topic of topicOptions; track topic.value) {
           <option [value]="topic.value">{{ topic.label }}</option>
@@ -39,19 +39,19 @@
     </label>
 
     <label class="video-filters__search">
-      <span>Pesquisar</span>
+      <span>{{ 'videos.filter_search' | translate }}</span>
       <input
         type="search"
         [value]="searchQuery()"
         (input)="setSearchQuery($any($event.target).value)"
-        placeholder="children, biomarkers, evidence / evidência..."
+        [placeholder]="'videos.filter_search_placeholder' | translate"
       />
     </label>
   </div>
 
   @if (visibleMedia().length === 0) {
     <p class="video-gallery__empty">
-      No media items match current filters / nenhum item corresponde aos filtros.
+      {{ 'videos.empty' | translate }}
     </p>
   } @else {
     <ul class="video-gallery__grid" aria-label="Media portfolio cards">
@@ -109,7 +109,7 @@
             <p class="media-card__summary">{{ media.summary }}</p>
 
             <footer class="media-card__footer">
-              <span>{{ formatPublicationDate(media.publishedAt) }}</span>
+              <span>{{ formatPublicationDate(media.publishedAt) }} - </span>
               @if (isVideo(media)) {
                 <span>{{ media.durationMinutes }} min / duração</span>
               }

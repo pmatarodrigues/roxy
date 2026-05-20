@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import rawCommunications from '../features/publications/communications.json';
 import rawPublications from '../features/publications/publications.json';
+import { I18nService } from '../features/i18n/i18n.service';
+import { TranslatePipe } from '../features/i18n/translate.pipe';
 
 interface Publication {
   readonly id: string;
@@ -29,24 +31,25 @@ interface Communications {
   readonly poster: readonly Communication[];
 }
 
-const TYPE_LABELS: Record<Publication['type'], string> = {
-  article: 'Artigo',
-  'book-chapter': 'Capítulo de livro',
-  opinion: 'Opinião',
+const TYPE_LABEL_KEYS: Record<Publication['type'], string> = {
+  article: 'publications.type_article',
+  'book-chapter': 'publications.type_book_chapter',
+  opinion: 'publications.type_opinion',
 };
 
 @Component({
   selector: 'app-publications-page',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './publications-page.component.html',
   styleUrl: './publications-page.component.scss',
 })
 export class PublicationsPageComponent {
+  protected readonly i18n = inject(I18nService);
   protected readonly publications = rawPublications as Publication[];
   protected readonly communications = rawCommunications as Communications;
 
-  protected getTypeLabel(type: Publication['type']): string {
-    return TYPE_LABELS[type];
+  protected getTypeLabelKey(type: Publication['type']): string {
+    return TYPE_LABEL_KEYS[type];
   }
 }

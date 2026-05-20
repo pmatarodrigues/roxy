@@ -1,20 +1,18 @@
 <section id="contact" aria-labelledby="contact-title" class="contact">
   <div class="contact__intro">
-    <p class="contact__eyebrow">Scrapbook CTA · conversa aberta</p>
-    <h2 id="contact-title">Open to conversations · aberta a conversas</h2>
+    <h2 id="contact-title">{{ 'contact.title' | translate }}</h2>
     <p class="contact__summary">
-      Science, writing, ideas, collaborations · ciência, escrita, ideias e colaborações.
+      {{ 'contact.summary' | translate }}
     </p>
 
   </div>
 
-  <div class="contact__actions scrapbook-paper scrapbook-pin-note scrapbook-ribbon-top">
-    <p class="contact__actions-title">Science, writing, ideas, collaborations</p>
+  <div class="contact__actions scrapbook-paper">
     <a class="contact-action contact-action--primary" [href]="mailtoHref">
-      Open to conversations · aberta a conversas
+      {{ 'contact.cta' | translate }}
     </a>
     <a class="contact-action" [href]="linkedInUrl" target="_blank" rel="noopener noreferrer">
-      LinkedIn profile · perfil LinkedIn
+      {{ 'contact.linkedin' | translate }}
     </a>
   </div>
 </section>

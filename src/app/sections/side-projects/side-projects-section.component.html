@@ -1,14 +1,14 @@
 <section id="side-projects" aria-labelledby="side-projects-title" class="side-projects">
   <header class="side-projects__header scrapbook-paper scrapbook-stamp scrapbook-doodle-wave">
-    <p class="side-projects__eyebrow">Projetos & hobbies · beyond benchwork</p>
+    <p class="side-projects__eyebrow">{{ 'side_projects.eyebrow' | translate }}</p>
     <h2 id="side-projects-title">
-      Postais Para Cientistas
+      {{ 'side_projects.title' | translate }}
     </h2>
   </header>
 
   <div class="scribble-divider side-projects__divider" aria-hidden="true"></div>
 
-  <div class="postcards-filmstrip" aria-label="Galeria de postais para cientistas">
+  <div class="postcards-filmstrip" [attr.aria-label]="'side_projects.gallery_label' | translate">
     @for (card of postcards(); track card.id) {
       <figure class="postcard scrapbook-paper">
         <img

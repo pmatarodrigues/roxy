@@ -4,6 +4,7 @@ export interface BlogPostMeta {
   readonly date: string;
   readonly excerpt: string;
   readonly cover?: string;
+  readonly languages: readonly ('en' | 'pt')[];
 }
 
 export interface BlogIndex {
@@ -12,4 +13,8 @@ export interface BlogIndex {
 
 export interface BlogPost extends BlogPostMeta {
   readonly markdown: string;
+}
+
+export interface BlogPostWithAvailability extends BlogPostMeta {
+  readonly availableInCurrentLang: boolean;
 }

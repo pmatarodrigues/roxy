@@ -1,6 +1,6 @@
 <section class="blog-post">
   <div class="blog-post__inner">
-    <a class="blog-post__back" routerLink="/">← Back to portfolio</a>
+    <a class="blog-post__back" [routerLink]="'/' + i18n.lang()">{{ 'blog.back' | translate }}</a>
 
     @if (post$ | async; as post) {
       <header class="blog-post__header">
@@ -11,8 +11,8 @@
 
       <article class="blog-post__content" [innerHTML]="post.html"></article>
     } @else {
-      <h1>Post not found</h1>
-      <p>This article is unavailable right now.</p>
+      <h1>{{ 'blog.not_found' | translate }}</h1>
+      <p>{{ 'blog.unavailable' | translate }}</p>
     }
   </div>
 </section>

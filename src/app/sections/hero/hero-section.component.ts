@@ -1,5 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { I18nService } from '../../features/i18n/i18n.service';
+import { TranslatePipe } from '../../features/i18n/translate.pipe';
 
 interface HeroNote {
   readonly label: string;
@@ -41,7 +44,7 @@ const FOCUS_TAGS: readonly FocusTag[] = [
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -49,4 +52,5 @@ const FOCUS_TAGS: readonly FocusTag[] = [
 export class HeroSectionComponent {
   protected readonly heroNotes = HERO_NOTES;
   protected readonly focusTags = FOCUS_TAGS;
+  protected readonly lang = inject(I18nService).lang;
 }

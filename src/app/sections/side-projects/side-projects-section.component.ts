@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 
+import { TranslatePipe } from '../../features/i18n/translate.pipe';
+
 interface Postcard {
   readonly id: string;
   readonly imagePath: string;
@@ -20,6 +22,7 @@ function filenameToPostcard(filename: string, index: number): Postcard {
 @Component({
   selector: 'app-side-projects-section',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './side-projects-section.component.html',
   styleUrl: './side-projects-section.component.scss',
 })

@@ -1,6 +1,8 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
+import { TranslatePipe } from '../../features/i18n/translate.pipe';
+
 import { PORTFOLIO_MEDIA } from '../../features/videos/video.data';
 import { filterVideos } from '../../features/videos/video-filters';
 import {
@@ -28,13 +30,13 @@ const YOUTUBE_ID_PATTERN = /^[A-Za-z0-9_-]{11}$/;
 const VIMEO_ID_PATTERN = /^\d{6,12}$/;
 
 const LANGUAGE_OPTIONS: readonly FilterOption<VideoLanguageFilter>[] = [
-  { value: 'ALL', label: 'All / Todos' },
+  { value: 'ALL', label: 'Todos' },
   { value: 'EN', label: 'EN' },
   { value: 'PT', label: 'PT' },
 ];
 
 const TOPIC_OPTIONS: readonly FilterOption<VideoTopicFilter>[] = [
-  { value: 'ALL', label: 'All topics' },
+  { value: 'ALL', label: 'Todos' },
   {
     value: 'circulating-tumour-cells',
     label: 'Circulating tumour cells / Células tumorais circulantes',
@@ -73,6 +75,7 @@ const buildTrustedEmbedUrl = (video: PortfolioVideo): string | null => {
 @Component({
   selector: 'app-video-gallery',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './video-gallery.component.html',
   styleUrl: './video-gallery.component.scss',
 })

@@ -6,14 +6,14 @@
     >
       <!--<p class="hero-card__eyebrow">Portugal · Oncology + Microfluidics · EN / PT / DE</p>-->
 
-      <h1 id="hero-title">Ciência Com Voz Própria</h1>
+      <h1 id="hero-title">{{ 'hero.title' | translate }}</h1>
 
       <p class="hero-card__lede">
-        Adriana Carneiro
+        {{ 'hero.lede' | translate }}
       </p>
 
       <p class="hero-card__summary">
-        Uma bióloga entusiasmada com doutoramento em oncologia que acredita que a ciência deve ser divertida e acessível a toda a comunidade. Bem-vindo ao meu local especial onde a ciência é comunicada de forma clara e divertida, sem nunca perder o rigor que lhe é exigida.
+        {{ 'hero.summary' | translate }}
       </p>
 
       <!--<ul class="hero-card__tags" aria-label="Career transition focus">
@@ -43,8 +43,8 @@
 
     <aside class="hero-notes" aria-label="Editorial scrapbook highlights">
       <div class="hero-note scrapbook-paper scrapbook-pin-note scrapbook-paper--tilt-left">
-        <p class="hero-note__label">Sugestão do Mês</p>
-        <h2>One text I recommend if you are new here</h2>
+        <p class="hero-note__label">{{ 'hero.month_pick' | translate }}</p>
+        <h2>{{ 'hero.month_rec' | translate }}</h2>
         <p>Summary or LINK</p>
       </div>
       <!--@for (note of heroNotes; track note.title; let i = $index) {
@@ -64,18 +64,18 @@
 
     <div class="hero-meta hero__actions">
       <a class="hero-action hero-action--primary" href="#contact">
-        Disponível Para Conversar
+        {{ 'hero.cta_contact' | translate }}
       </a>
 
-      <a class="hero-action hero-action--secondary" routerLink="/publications">
-        Publicações Científicas
+      <a class="hero-action hero-action--secondary" [routerLink]="'/' + lang() + '/publications'">
+        {{ 'hero.cta_publications' | translate }}
       </a>
     </div>
 
     <div class="scribble-divider" aria-hidden="true"></div>
 
     <p class="hero-meta" aria-label="Navigation hint">
-      Scroll para ler textos, explorar interesses e descobrir projetos.
+      {{ 'hero.scroll_hint' | translate }}
     </p>
   </div>
 
