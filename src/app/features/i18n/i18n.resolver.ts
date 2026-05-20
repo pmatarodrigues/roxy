@@ -9,7 +9,7 @@ export const i18nResolver: ResolveFn<void> = (route) => {
   const router = inject(Router);
   const lang = route.paramMap.get('lang');
   if (lang !== 'en' && lang !== 'pt') {
-    router.navigate(['/pt']);
+    router.navigate(['/en']);
     return of(void 0);
   }
   return i18n.load(lang);

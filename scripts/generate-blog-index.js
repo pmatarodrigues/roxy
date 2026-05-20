@@ -75,6 +75,7 @@ for (const lang of LANGS) {
     const base = `/content/blog/${lang}/${slug}`;
     const cover = meta.cover ? `${base}/${meta.cover}` : undefined;
     const hero = meta.hero ? `${base}/${meta.hero}` : undefined;
+    const category = meta.category;
 
     if (!postsBySlug[slug]) postsBySlug[slug] = { slug, langs: [] };
     postsBySlug[slug].langs.push(lang);
@@ -85,6 +86,7 @@ for (const lang of LANGS) {
       postsBySlug[slug].excerpt = meta.excerpt ?? '';
       if (cover) postsBySlug[slug].cover = cover;
       if (hero) postsBySlug[slug].hero = hero;
+      if (category) postsBySlug[slug].category = category;
     }
   }
 }
@@ -92,7 +94,7 @@ for (const lang of LANGS) {
 const posts = Object.values(postsBySlug)
   .filter((p) => p.date)
   .sort((a, b) => new Date(b.date) - new Date(a.date))
-  .map(({ slug, title, date, excerpt, cover, hero, langs }) => ({
+  .map(({ slug, title, date, excerpt, cover, hero, langs, category }) => ({
     slug,
     title,
     date,
@@ -100,6 +102,7 @@ const posts = Object.values(postsBySlug)
     ...(cover ? { cover } : {}),
     ...(hero ? { hero } : {}),
     languages: langs,
+    category,
   }));
 
 mkdirSync(BLOG_DIR, { recursive: true });

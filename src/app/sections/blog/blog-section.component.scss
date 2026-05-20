@@ -149,22 +149,35 @@ h2 {
 }
 
 /* ── Lang badge (overlay on image) ─────────────────────────── */
-
-.blog-card__lang-badge {
+.blog-card__badges-section {
   position: absolute;
   top: var(--space-2);
   right: var(--space-2);
   margin: 0;
   display: inline-flex;
   align-items: center;
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-sm);
   font-family: var(--font-mono);
   font-size: var(--step--2);
+  letter-spacing: 0.04em;
+}
+
+.blog-card__badge {
   background: oklch(1 0 0 / 0.88);
   color: var(--muted-foreground);
-  letter-spacing: 0.04em;
   backdrop-filter: blur(4px);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.blog-card__lang-badge {
+  background: oklch(1 0 0 / 0.88);
+  color: var(--muted-foreground);
+}
+
+.blog-card__category-badge {
+  margin-right: 20px;
+  background: oklch(0.68 0.16 28 / 0.88);
+  color: var(--surface);
 }
 
 /* ── Card body ──────────────────────────────────────────────── */

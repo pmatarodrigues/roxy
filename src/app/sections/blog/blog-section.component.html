@@ -1,6 +1,5 @@
 <section id="blog" aria-labelledby="blog-title" class="blog">
   <header class="blog__header scrapbook-doodle-wave">
-    <p class="blog__eyebrow">{{ 'blog.eyebrow' | translate }}</p>
 
     <h2 id="blog-title">{{ 'blog.title' | translate }}</h2>
     <p class="blog__intro">
@@ -32,9 +31,15 @@
               @if (post.hero) {
                 <img class="blog-card__hero-img" [src]="post.hero" [alt]="post.title" loading="lazy" decoding="async" />
               }
+
+
+            <div class="blog-card__badges-section">
+              <span class="blog-card__badge blog-card__category-badge">{{ "Vozes da Ciência" | translate }}</span>
+
               @if (!post.availableInCurrentLang) {
-                <span class="blog-card__lang-badge">{{ unavailableBadgeKey(post.languages) | translate }}</span>
+                <span class="blog-card__badge blog-card__lang-badge">{{ unavailableBadgeKey(post.languages) | translate }}</span>
               }
+              </div>
             </div>
 
             <div class="blog-card__body">

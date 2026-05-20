@@ -7,6 +7,7 @@ export interface BlogPostMeta {
   readonly hero?: string;
   readonly languages: readonly ('en' | 'pt')[];
   readonly baseUrl?: string;
+  readonly category?: string;
 }
 
 export interface BlogIndex {

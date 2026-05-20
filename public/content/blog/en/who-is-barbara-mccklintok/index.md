@@ -3,6 +3,7 @@ title: Who is Barbara McClintock?
 date: 2026-03-15
 excerpt: "A brilliant woman born in a time built for men."
 hero: hero-01.jpeg
+category: Vozes da Ciência
 --- 
 
 Born as Eleanor, in 1902, she soon became known to family and friends simply as Barbara McClintock, a brilliant woman born in a time built for men. She was the third of four children and, in a house full of kids, she quickly stood out, exhibiting a fiercely independent and intellectually curious mind. I'd like to think it came from her mother, who believed that ++"learners should not only be readers but thinkers as well."++
@@ -13,7 +14,7 @@ Nevertheless, that same mother initially vetoed Barbara's plan to go to college,
 
 ![Barbara at Cornell|left](img-notold.jpeg)
 
-She pursued her studies at Cornell University, receiving her bachelor's degree in 1923. Four years later she earned a PhD specialising in cytology, genetics, and zoology. Her influence on campus extended well beyond the classroom. She joined the student government and played banjo in a jazz band. And although women were not permitted to major in genetics at Cornell, she became a highly influential member of a small group who studied maize cytogenetics.
+She pursued her studies at Cornell University, receiving her bachelor's degree in 1923. Four years later she earned a PhD specialising in cytology, genetics, and zoology. Her influence on campus extended well beyond the classroom. She joined the student government and played banjo in a jazz band. And although women were not allowed to major in genetics at Cornell, she became a highly influential member of a small group who studied maize cytogenetics.
 
 Her thirst for knowledge drove her to progress much faster than anyone expected of a woman at that time. Within just two years of finishing her doctorate, she had published six articles, four of them single-authored. From the very beginning, her research focused on chromosomes and how they change during reproduction in maize. She developed the technique for visualising maize chromosomes and used microscopic analysis to demonstrate many fundamental genetic ideas. Together with Harriet Creighton, she demonstrated that genetic crossing-over was accompanied by physical crossing-over of chromosomes, beating the German Drosophila geneticist Curt Stern, who made a similar finding in flies independently, by a matter of weeks.
 
@@ -23,7 +24,7 @@ Perhaps because of that connection, in ==1933==, McClintock received a fellowshi
 
 It was only in 1936 that she was finally hired as an assistant professor at the University of Missouri, where she encountered X-rays as a tool for studying genetics. But her true passion was never teaching, it was discovery! So, in 1941, she moved to Cold Spring Harbor, New York, accepting a research position at the Carnegie Institution of Washington, where she would spend the rest of her professional life.
 
-It was here, in the late 1940s, that she dared to challenge one of the great dogmas of 20th-century biology:The idea that genes were stable entities arranged in orderly linear patterns on chromosomes, like beads on a string. 
+It was here, in the late 1940s, that she dared to challenge one of the great dogmas of 20th-century biology: ==The idea that genes were stable entities arranged in orderly linear patterns on chromosomes, like beads on a string.==
 
 ## Her hypothesis? 
 
@@ -43,7 +44,11 @@ And so, for nearly fifteen years, she worked in quiet solitude, tending her maiz
 
 ## But it's never too late to be recognised!
 
-In the late 1960s and early 1970s, the scientific community finally started to acknowledge her findings, after other biologists had determined that genetic material was DNA. In fact, the theory of genetic regulation put together by the French scientists Jacques Monod and François Jacob bore formal similarities to Barbara's theory of genetic control, a quiet vindication she had earned long before anyone cared to admit it. The formal recognition came in 1971, when President Richard Nixon awarded her the National Medal of Science. During the ceremony, Nixon said: "I have read explanations of your scientific work and I want you to know that I do not understand them", adding that precisely because he didn't understand them, he realised how enormously important they were. The 1980s followed with several other awards, including the Wolf Prize in Medicine (==1981==), the Albert Lasker Basic Medical Research Award (==1981==), and the Louisa Gross Horwitz Prize (==1982==). But the award of all awards "for her discovery of mobile genetic elements" was granted in ++1983++, when she became the first woman to be the sole winner of the Nobel Prize for Physiology or Medicine. She was 81 years old when she finally received the recognition she had deserved for decades.
+In the late 1960s and early 1970s, the scientific community finally started to acknowledge her findings, after other biologists had determined that genetic material was DNA. In fact, the theory of genetic regulation put together by the French scientists Jacques Monod and François Jacob bore formal similarities to Barbara's theory of genetic control, a quiet vindication she had earned long before anyone cared to admit it. The formal recognition came in 1971, when President Richard Nixon awarded her the National Medal of Science. 
+
+During the ceremony, Nixon said: "I have read explanations of your scientific work and I want you to know that I do not understand them", adding that precisely because he didn't understand them, he realised how enormously important they were. The 1980s followed with several other awards, including the Wolf Prize in Medicine (==1981==), the Albert Lasker Basic Medical Research Award (==1981==), and the Louisa Gross Horwitz Prize (==1982==). 
+
+But the award of all awards "for her discovery of mobile genetic elements" was granted in ++1983++, when she became the first woman to be the sole winner of the Nobel Prize for Physiology or Medicine. She was 81 years old when she finally received the recognition she had deserved for decades.
 
 ![Barbara receiving the Nobel Prize](img-01.jpeg)
 
