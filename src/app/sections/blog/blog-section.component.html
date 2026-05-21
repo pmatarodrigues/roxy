@@ -21,7 +21,7 @@
             [class.scrapbook-paper--tilt-right]="isTiltRight(index)"
             [class.scrapbook-tape]="index === 0"
             [class.scrapbook-paperclip]="index % 2 === 1"
-            [class.scrapbook-torn-edge]="index % 2 === 0"
+            [class.scrapbook-torn-edge]="index % 2 === 0 && index !== 0"
             [class.blog-card--zine]="index === 0"
             [class.blog-card--postcard]="index === 1"
             [class.blog-card--notebook]="index > 1"

@@ -264,6 +264,12 @@ h1 {
   }
 }
 
+@media (min-width: 901px) {
+  .hero-card--intro {
+    padding-right: 46%;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-notes {
     position: static;

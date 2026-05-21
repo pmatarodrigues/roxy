@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 import { I18nService } from './features/i18n/i18n.service';
@@ -28,6 +29,13 @@ export class App {
   protected readonly i18n = inject(I18nService);
   protected readonly sectionLinks = SECTION_LINKS;
   protected readonly currentYear = new Date().getFullYear();
+
+  constructor() {
+    inject(ViewportScroller).setOffset(() => {
+      const header = document.querySelector('.site-header') as HTMLElement | null;
+      return [0, (header?.offsetHeight ?? 64) + 8];
+    });
+  }
 
   protected lang(): 'en' | 'pt' {
     return this.i18n.lang();

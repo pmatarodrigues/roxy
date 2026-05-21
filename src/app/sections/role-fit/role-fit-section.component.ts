@@ -39,6 +39,7 @@ const STRENGTH_EVIDENCE: readonly StrengthEvidence[] = [
     ctaHref: '#contact',
     accent: 'coral',
   },
+
   {
     role: 'Science Communication',
     label: 'Role focus · foco da vaga',

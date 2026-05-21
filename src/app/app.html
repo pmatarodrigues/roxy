@@ -2,7 +2,7 @@
 
 <header class="site-header" id="top">
   <div class="site-header__inner">
-    <a [href]="'/' + lang() + '/#top'" class="site-header__brand">
+    <a [routerLink]="['/', lang()]" fragment="top" class="site-header__brand">
       <span class="site-header__name">Adriana Carneiro</span>
       <span class="site-header__tag">PhD</span>
     </a>
@@ -11,7 +11,7 @@
       <ul class="site-nav__list">
         @for (link of sectionLinks; track link.id) {
           <li>
-            <a [href]="'/' + lang() + '/#' + link.id" class="site-nav__anchor">{{ link.key | translate }}</a>
+            <a [routerLink]="['/', lang()]" [fragment]="link.id" class="site-nav__anchor">{{ link.key | translate }}</a>
           </li>
         }
       </ul>
@@ -31,6 +31,6 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
     <p>© {{ currentYear }} Adriana Carneiro</p>
-    <a [href]="'/' + lang() + '/#top'" class="site-footer__top">{{ 'footer.top' | translate }}</a>
+    <a [routerLink]="['/', lang()]" fragment="top" class="site-footer__top">{{ 'footer.top' | translate }}</a>
   </div>
 </footer>

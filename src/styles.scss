@@ -22,6 +22,14 @@ body {
   min-height: 100%;
 }
 
+html {
+  scroll-padding-top: 5rem;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 body {
   overflow-x: clip;
 }
