@@ -212,6 +212,17 @@ h1 {
   text-wrap: balance;
 }
 
+.hero-note h2 a {
+  color: inherit;
+  text-decoration: underline wavy var(--accent-coral);
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 1.5px;
+}
+
+.hero-note h2 a:hover {
+  color: var(--accent-coral);
+}
+
 .hero-note p {
   margin-top: var(--space-2);
   font-size: var(--step--1);

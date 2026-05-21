@@ -16,8 +16,9 @@ hero:
   cta_contact: Available to Talk
   cta_publications: Scientific Publications
   scroll_hint: Scroll to read texts, explore interests and discover projects.
-  month_pick: Month Pick
-  month_rec: One text I recommend if you are new here
+  month_pick: Pick of the Month
+  month_rec: Who is Barbara McClintock?
+  month_rec_summary: A brilliant woman born in a time built for men.
 
 blog:
   eyebrow: Writing Desk

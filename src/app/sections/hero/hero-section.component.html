@@ -44,8 +44,12 @@
     <aside class="hero-notes" aria-label="Editorial scrapbook highlights">
       <div class="hero-note scrapbook-paper scrapbook-pin-note scrapbook-paper--tilt-left">
         <p class="hero-note__label">{{ 'hero.month_pick' | translate }}</p>
-        <h2>{{ 'hero.month_rec' | translate }}</h2>
-        <p>Summary or LINK</p>
+        <h2>
+          <a [routerLink]="['/', lang(), 'blog', 'who-is-barbara-mccklintok']">
+            {{ 'hero.month_rec' | translate }}
+          </a>
+        </h2>
+        <p>{{ 'hero.month_rec_summary' | translate }}</p>
       </div>
       <!--@for (note of heroNotes; track note.title; let i = $index) {
         <article
